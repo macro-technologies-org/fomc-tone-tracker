@@ -825,6 +825,14 @@ const MEMBERS = [
 
 // Speech corpus
 // ═══════════════════════════════════════
+// GLOBAL STATE — declared before loadCorpus() so it can reference them
+// ═══════════════════════════════════════
+const data = {};
+let total = 0;
+let scored = 0;
+MEMBERS.forEach(m => { data[m.id] = []; });
+
+// ═══════════════════════════════════════
 // CORPUS — loaded dynamically from corpus.json
 // Falls back to empty corpus if not found
 // ═══════════════════════════════════════
@@ -897,8 +905,7 @@ async function loadCorpus() {
     return 0;
   }
 }
-let total = 0; // updated after loadCorpus()
-MEMBERS.forEach(m => { data[m.id] = []; });
+
 
 // ═══════════════════════════════════════
 // SCORING ENGINE (3-component)
