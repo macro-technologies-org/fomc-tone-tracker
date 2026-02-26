@@ -5,56 +5,168 @@
       "title": "Economic Outlook",
       "venue": "60 Minutes, CBS",
       "text": "Policy is restrictive and working. We believe we have likely reached the peak rate. Question is when to begin dialing it back. We want to see inflation come down on a sustainable basis. We do not expect it will be appropriate to cut rates at the March meeting. Six months of good inflation data\u2014we want to see more.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -11,
+      "stance": 0,
+      "balance": 0,
+      "direction": -32,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -11,
+        "stance": 0,
+        "balance": 0,
+        "direction": -32,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-05-14",
       "title": "Monetary Policy Outlook",
       "venue": "Foreign Bankers Association, Amsterdam",
       "text": "We did not expect this to be a smooth road but these are higher readings than expected. It is too soon to say whether the recent readings represent more than a bump. We need to be patient and let restrictive policy do its work. Rate cuts will come when we are more confident inflation is heading sustainably to 2 percent.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 10,
+      "stance": 0,
+      "balance": 0,
+      "direction": 28,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 10,
+        "stance": 0,
+        "balance": 0,
+        "direction": 28,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-11-07",
       "title": "Post-FOMC Press Conference",
       "venue": "Federal Reserve, Washington DC",
       "text": "The economy is strong overall. Labor market has cooled but remains solid. Inflation has moved much closer to 2 percent. We cut 25bp today recalibrating from a highly restrictive stance. Policy is still restrictive. We are not on any preset course. We will assess each meeting based on incoming data.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -2,
+      "stance": 0,
+      "balance": -15,
+      "direction": 8,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -2,
+        "stance": 0,
+        "balance": -15,
+        "direction": 8,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-12-18",
       "title": "Post-FOMC Press Conference December",
       "venue": "Federal Reserve, Washington DC",
       "text": "Policy remains restrictive even after today's 25bp cut. We are significantly closer to neutral but not there yet. Inflation has been a bit higher than expected. We can afford to be cautious going forward. Slower pace of cuts appropriate as we get closer to neutral. Not on preset course\u2014data dependent.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 3,
+      "stance": 0,
+      "balance": 0,
+      "direction": 8,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 3,
+        "stance": 0,
+        "balance": 0,
+        "direction": 8,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-08-23",
       "title": "Review and Outlook",
       "venue": "Jackson Hole",
       "text": "The time has come for policy to adjust. The direction of travel is clear. We do not seek or welcome further cooling in labor market conditions. Inflation has declined significantly.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -9,
+      "stance": 0,
+      "balance": -30,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -9,
+        "stance": 0,
+        "balance": -30,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-05-07",
       "title": "Post-FOMC Press Conference",
       "venue": "Federal Reserve",
       "text": "We do not think it will be appropriate to reduce our target range until we have gained greater confidence that inflation is moving sustainably toward 2 percent. Uncertainty about the economic outlook is quite elevated. The Fed is well positioned to wait for greater clarity.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 10,
+      "stance": 0,
+      "balance": 0,
+      "direction": 28,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 10,
+        "stance": 0,
+        "balance": 0,
+        "direction": 28,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-08-22",
       "title": "Monetary Policy and Framework Review",
       "venue": "Jackson Hole",
       "text": "Monthly job creation slowed to an average pace of 35,000 over the past three months. Goods inflation has shifted notably higher. The effects of tariffs on consumer prices are clearly visible. We are not on a preset course.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 2,
+      "stance": 0,
+      "balance": 0,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 2,
+        "stance": 0,
+        "balance": 0,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-12-10",
       "title": "Post-FOMC Press Conference",
       "venue": "Federal Reserve",
       "text": "We lowered the policy rate by 25 basis points. We are in the high end of the range of neutral. Labor market conditions appear to be gradually cooling and inflation remains somewhat elevated. We are in a challenging position with both sides of the mandate in tension.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -4,
+      "stance": 0,
+      "balance": -15,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -4,
+        "stance": 0,
+        "balance": -15,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     }
   ],
   "jefferson": [
@@ -63,56 +175,168 @@
       "title": "US Economic Outlook and Housing Price Dynamics",
       "venue": "Mortgage Bankers Association, New York",
       "text": "Inflation remains too high despite recent progress. I am fully committed to returning inflation to 2 percent. The labor market remains strong. I expect inflation to continue declining but the path will be uneven. It remains to be seen whether recent elevated readings are a bump or something more persistent. We are in restrictive territory and monitoring carefully.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 2,
+      "stance": 0,
+      "balance": 0,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 2,
+        "stance": 0,
+        "balance": 0,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-09-09",
       "title": "Central Bank Communications",
       "venue": "Cleveland Fed Conference, Cleveland",
       "text": "Recent progress on inflation has been encouraging. The labor market is normalizing gradually. I think the time has come to begin reducing policy restraint, though the pace will depend on data. We remain committed to 2 percent inflation. We should not wait until inflation is exactly at target before beginning to ease.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 5,
+      "stance": 0,
+      "balance": -15,
+      "direction": 28,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 5,
+        "stance": 0,
+        "balance": -15,
+        "direction": 28,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-10-21",
       "title": "Economic Outlook",
       "venue": "Charlotte Economics Club, Charlotte NC",
       "text": "The economy is in a good place. Inflation has come down substantially. Labor market is cooling but not deteriorating. Policy has moved toward less restrictive territory following September's cut. I expect to recalibrate policy further as we gain confidence inflation is sustainably heading to 2 percent.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -22,
+      "stance": 0,
+      "balance": -30,
+      "direction": -32,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -22,
+        "stance": 0,
+        "balance": -30,
+        "direction": -32,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-11-22",
       "title": "Disinflation and Labor Market",
       "venue": "ECB Conference, Frankfurt",
       "text": "Progress on inflation has been uneven but the underlying trend is favorable. Labor market supply and demand are coming into better balance. Policy is still on the restrictive side. Gradual easing of restraint remains appropriate. We are attentive to both sides of the dual mandate as risks are now more balanced.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -4,
+      "stance": 0,
+      "balance": -15,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -4,
+        "stance": 0,
+        "balance": -15,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-03-15",
       "title": "Economic Outlook",
       "venue": "Lafayette College",
       "text": "I am cautiously optimistic. Conditions in the labor market appear to be stabilizing. Inflation remains somewhat elevated from our 2 percent goal. Core CPI rose 2.6 percent.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 2,
+      "stance": 0,
+      "balance": 0,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 2,
+        "stance": 0,
+        "balance": 0,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-09-30",
       "title": "Monetary Policy Frameworks",
       "venue": "Helsinki",
       "text": "In the first half of 2025, U.S. GDP grew at about 1.5 percent annual rate, a marked cooling from last year's 2.5 percent. Employment growth has slowed to just 29,000 per month on average.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -9,
+      "stance": 0,
+      "balance": -30,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -9,
+        "stance": 0,
+        "balance": -30,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-11-17",
       "title": "Economic Outlook and Monetary Policy",
       "venue": "Kansas City Fed",
       "text": "GDP rose at 4.3 percent annual rate in Q3, a sharp acceleration. Business investment grew solidly. Inflation remains somewhat elevated from our 2 percent goal. CPI rose 2.7 percent over 12 months. Core CPI rose 2.6 percent.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 7,
+      "stance": 0,
+      "balance": 15,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 7,
+        "stance": 0,
+        "balance": 15,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2026-02-06",
       "title": "Economic Outlook and Supply-Side Disinflation",
       "venue": "Drexel Forum",
       "text": "The labor market has become more fragile beneath the surface. Hiring remains low. Job growth averaged 50,000 per month in recent months. Core CPI rose 2.6 percent. The underlying trend in inflation appears to be moving closer to our 2 percent target.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -14,
+      "stance": 0,
+      "balance": -45,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -14,
+        "stance": 0,
+        "balance": -45,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     }
   ],
   "waller": [
@@ -121,56 +345,168 @@
       "title": "Economic Outlook",
       "venue": "University of Notre Dame, Indiana",
       "text": "We do not need to rush to cut rates. Inflation is still well above 2 percent. The labor market remains strong. There is no cost to waiting for more data to gain confidence inflation is on a sustained downward path. Policy is restrictive. I am in no hurry to cut rates until confident we are on a sustained path to 2 percent.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 2,
+      "stance": 0,
+      "balance": -15,
+      "direction": 20,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 2,
+        "stance": 0,
+        "balance": -15,
+        "direction": 20,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-07-17",
       "title": "Inflation and Monetary Policy",
       "venue": "Kansas City Fed, Kansas City",
       "text": "Recent data have been very good. The last three months of CPI data provide real confidence inflation is heading back to 2 percent. A rate cut could be warranted in the next few months if data continues improving. The labor market has cooled but is not deteriorating. Both sides of the mandate are now in better balance.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -19,
+      "stance": 0,
+      "balance": -15,
+      "direction": -40,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -19,
+        "stance": 0,
+        "balance": -15,
+        "direction": -40,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-10-14",
       "title": "Economic Outlook and Monetary Policy Rules",
       "venue": "Hoover Institution, Stanford CA",
       "text": "Economy on a solid footing. Employment near maximum employment. Inflation in the vicinity of our target despite a recent disappointing reading. GDP grew 2.2 percent in first half. The larger message of the September SEP is that there is still considerable policy restrictiveness to remove. If the economy continues in its current sweet spot, this will happen gradually.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -6,
+      "stance": 0,
+      "balance": -15,
+      "direction": -3,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -6,
+        "stance": 0,
+        "balance": -15,
+        "direction": -3,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-12-02",
       "title": "Monetary Policy Outlook",
       "venue": "American Enterprise Institute, Washington DC",
       "text": "The economy is solid. Inflation is close to but not at 2 percent. The labor market is healthy. We have made significant progress. I lean toward cutting rates in December but the decision depends on data. We have room to proceed carefully as we approach neutral. Risks are roughly balanced.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -12,
+      "stance": 0,
+      "balance": -15,
+      "direction": -20,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -12,
+        "stance": 0,
+        "balance": -15,
+        "direction": -20,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-01-16",
       "title": "Economic Outlook",
       "venue": "Brookings Institution",
       "text": "I support holding the policy rate at its current level while closely monitoring how the data evolve. There is still work to do on inflation. Services inflation remains elevated. The labor market appears in good shape, with low layoffs and a stable unemployment rate.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -4,
+      "stance": 0,
+      "balance": -30,
+      "direction": 20,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -4,
+        "stance": 0,
+        "balance": -30,
+        "direction": 20,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-09-17",
       "title": "Economic Outlook",
       "venue": "OECD Paris",
       "text": "Monthly job creation went from 111,000 in Q1 to 55,000 in Q2 and the latest for August was 22,000. Payroll employment has likely actually fallen on net since May. The broad message of labor market data is one of weakening demand.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -22,
+      "stance": 0,
+      "balance": -60,
+      "direction": -3,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -22,
+        "stance": 0,
+        "balance": -60,
+        "direction": -3,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-11-17",
       "title": "The Case for Continuing Rate Cuts",
       "venue": "London",
       "text": "Inflation appears under control and I see the labor market continuing to weaken. The case for continuing rate cuts is strong. Absent an unexpected resurgence in inflation, it will likely be appropriate to continue reducing the policy rate toward its longer-run normal level.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -19,
+      "stance": 0,
+      "balance": -15,
+      "direction": -40,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -19,
+        "stance": 0,
+        "balance": -15,
+        "direction": -40,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2026-02-07",
       "title": "Economic Outlook 2026",
       "venue": "University of California Santa Barbara",
       "text": "The economic outlook remains solid as we enter 2026. We have brought inflation down significantly from its peak without causing a recession. The labor market continues to cool gradually. Tariff effects on inflation should be largely transitory.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -12,
+      "stance": 0,
+      "balance": -30,
+      "direction": -3,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -12,
+        "stance": 0,
+        "balance": -30,
+        "direction": -3,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     }
   ],
   "bowman": [
@@ -179,49 +515,147 @@
       "title": "Monetary Policy and the Economic Outlook",
       "venue": "Georgia Bankers Association, Charleston SC",
       "text": "I dissented at September preferring a 25bp cut rather than 50bp. A 50bp cut could signal fragility not reflected in current conditions. My estimate of neutral is much higher than pre-pandemic. We are much closer to neutral than colleagues may believe. A more measured approach reduces risk of unleashing pent-up demand and reigniting inflation.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -1,
+      "stance": 0,
+      "balance": 0,
+      "direction": -4,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -1,
+        "stance": 0,
+        "balance": 0,
+        "direction": -4,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-10-10",
       "title": "Monetary Policy and the Economic Outlook",
       "venue": "Mid-Size Bank Coalition, Dallas TX",
       "text": "Inflation remains uncomfortably above 2 percent. My estimate of neutral is considerably higher than pre-pandemic. Beginning the cutting cycle with 50bp was overly aggressive. We are already much closer to neutral policy than FOMC median projections suggest. Caution is warranted. Further easing should be deliberate and evidence-based.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 4,
+      "stance": 0,
+      "balance": 15,
+      "direction": -4,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 4,
+        "stance": 0,
+        "balance": 15,
+        "direction": -4,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-11-20",
       "title": "Approaching Policymaking Pragmatically",
       "venue": "Forum Club, West Palm Beach FL",
       "text": "Core inflation has stalled at uncomfortably elevated levels. Progress has been slow and uneven. I remain cautious about easing too quickly. The neutral rate is likely higher than pre-pandemic estimates. Given still-elevated inflation and uncertainty about how quickly we approach neutral, a gradual and cautious approach to easing is appropriate.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 5,
+      "stance": 0,
+      "balance": 0,
+      "direction": 13,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 5,
+        "stance": 0,
+        "balance": 0,
+        "direction": 13,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-12-20",
       "title": "Monetary Policy Outlook 2025",
       "venue": "California Bankers Association, Laguna Beach CA",
       "text": "Core inflation remains elevated and is not improving quickly enough. Upside inflation risks persist. I supported December's cut reluctantly given continued inflation stickiness. My estimate of neutral is materially higher than the median, meaning we may already be at or near neutral. Further cuts require clear evidence of sustained progress toward 2 percent.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 7,
+      "stance": 15,
+      "balance": 30,
+      "direction": -24,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 7,
+        "stance": 15,
+        "balance": 30,
+        "direction": -24,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-06-23",
       "title": "Unintended Policy Shifts",
       "venue": "Czech National Bank",
       "text": "Optimal policy calls for looking through temporarily elevated inflation readings given the negative supply shock from tariffs also affecting aggregate demand. Since June I have argued that increasing signs of weakening labor market conditions provide a basis for beginning to move\u2026",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -6,
+      "stance": 0,
+      "balance": -30,
+      "direction": 13,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -6,
+        "stance": 0,
+        "balance": -30,
+        "direction": 13,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-09-23",
       "title": "Views on Economy and Monetary Policy",
       "venue": "Kentucky Bankers Assoc.",
       "text": "The Committee should have begun lowering the policy rate at the July meeting. I have been pointing out signs of potential labor market fragility. Increasing signs of weakening labor market conditions provide a basis for beginning to move the policy rate closer to neutral to proac\u2026",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -6,
+      "stance": 0,
+      "balance": -30,
+      "direction": 13,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -6,
+        "stance": 0,
+        "balance": -30,
+        "direction": 13,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2026-01-16",
       "title": "Outlook for Economy and Monetary Policy 2026",
       "venue": "New England Econ Forum",
       "text": "As we enter 2026, the economy has continued to grow but the labor market has become more fragile. Core PCE inflation would have hovered close to 2 percent after removing estimated tariff effects. Core services inflation is already roughly consistent with our target.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -6,
+      "stance": 0,
+      "balance": -30,
+      "direction": 13,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -6,
+        "stance": 0,
+        "balance": -30,
+        "direction": 13,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     }
   ],
   "miran": [
@@ -230,14 +664,42 @@
       "title": "Economic Outlook",
       "venue": "Columbia SIPA",
       "text": "My preference was for a 50 basis point rate cut at this meeting. The labor market is showing greater fragility than most appreciate. Growth has slowed meaningfully. Consumer spending among lower-income households is particularly weak.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -9,
+      "stance": 0,
+      "balance": -15,
+      "direction": -12,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -9,
+        "stance": 0,
+        "balance": -15,
+        "direction": -12,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-12-10",
       "title": "Policy Stance Heading into 2026",
       "venue": "Federal Reserve",
       "text": "I voted for a 50 basis point cut at this final meeting of 2025. The case for more aggressive easing continues to build. Employment risks have grown more severe. Inflation from tariffs remains a one-time price level adjustment rather than a sustained inflationary process.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -30,
+      "stance": 0,
+      "balance": -15,
+      "direction": -72,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -30,
+        "stance": 0,
+        "balance": -15,
+        "direction": -72,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     }
   ],
   "goolsbee": [
@@ -246,91 +708,273 @@
       "title": "Economic Outlook",
       "venue": "Chicago Fed, Chicago IL",
       "text": "The economy is on a golden path\u2014inflation coming down while employment stays strong. This is exactly what a soft landing looks like. Inflation is still above target but progress has been real. The labor market is solid. Policy has been restrictive and working. If progress continues we should begin discussing adjusting the level of restriction.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -6,
+      "stance": 0,
+      "balance": -15,
+      "direction": -3,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -6,
+        "stance": 0,
+        "balance": -15,
+        "direction": -3,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-09-23",
       "title": "Monetary Policy Outlook",
       "venue": "National Association of State Treasurers, Chicago IL",
       "text": "Risks to the dual mandate are now roughly in balance. Inflation has made substantial progress. Labor market is cooling in a healthy way. I see a continuous path of cutting with rates coming down significantly over the next year. If the data continues on this path, further easing is appropriate. The golden path of soft landing appears achievable.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -24,
+      "stance": 0,
+      "balance": -30,
+      "direction": -40,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -24,
+        "stance": 0,
+        "balance": -30,
+        "direction": -40,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-10-21",
       "title": "Central Bank Communications Beyond How Many?",
       "venue": "Hoover Institution, Stanford CA",
       "text": "The question has shifted from whether to cut to how fast. Inflation is on a path to 2 percent. The labor market is cooling but healthy. If economic conditions continue as expected, rates need to come down substantially. Policy communication is critical\u2014the Fed should communicate not just about the next meeting but the overall direction of travel.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -24,
+      "stance": 0,
+      "balance": -30,
+      "direction": -40,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -24,
+        "stance": 0,
+        "balance": -30,
+        "direction": -40,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-12-06",
       "title": "Annual Economic Outlook Symposium",
       "venue": "Chicago Fed 38th Annual Symposium, Chicago IL",
       "text": "2024 was a remarkable year. The economy achieved the conditions of a soft landing. Inflation has come down substantially while employment remained strong. Looking ahead there are meaningful uncertainties around trade policy and immigration. I remain optimistic the golden path continues but we need to watch for policy changes that could alter the outlook.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -6,
+      "stance": 0,
+      "balance": -15,
+      "direction": -3,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -6,
+        "stance": 0,
+        "balance": -15,
+        "direction": -3,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-02-05",
       "title": "Lessons from the Supply Side",
       "venue": "31st Annual Automotive Insights Symposium, Detroit Branch",
       "text": "Productivity growth is probably the single biggest determinant of our standard of living. The supply side of the economy \u2014 productivity, labor supply, and investment \u2014 has been an underappreciated driver of the soft landing.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -1,
+      "stance": 0,
+      "balance": 0,
+      "direction": -3,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -1,
+        "stance": 0,
+        "balance": 0,
+        "direction": -3,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-02-28",
       "title": "Remarks on Productivity Growth and Monetary Policy",
       "venue": "Stanford SIEPR Economic Summit",
       "text": "Productivity growth is probably the single biggest determinant of our standard of living. There are risks that inflation is about to start kicking back up. Tariff uncertainty means we need to be more careful about how fast rates can come down.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -1,
+      "stance": 0,
+      "balance": 0,
+      "direction": -3,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -1,
+        "stance": 0,
+        "balance": 0,
+        "direction": -3,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-04-20",
       "title": "Economic Outlook and Monetary Policy Remarks",
       "venue": "Face the Nation / CBS News",
       "text": "Large increases in tariffs will increase inflation and decrease economic activity. There are risks on both sides of the mandate. I am still hopeful that on the back end of this tariff uncertainty, we could see a new era of growth.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -14,
+      "stance": 0,
+      "balance": 0,
+      "direction": -40,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -14,
+        "stance": 0,
+        "balance": 0,
+        "direction": -40,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-06-30",
       "title": "Moderated Discussion at Aspen Ideas Festival",
       "venue": "Aspen, Colorado",
       "text": "The labor market is cooling. Inflation has come down significantly but remains above target. Tariffs represent a supply shock that creates difficult tradeoffs for monetary policy.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -6,
+      "stance": 0,
+      "balance": -15,
+      "direction": -3,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -6,
+        "stance": 0,
+        "balance": -15,
+        "direction": -3,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-08-13",
       "title": "Regional Insight: Monetary Policy Luncheon Q&A",
       "venue": "Greater Springfield Chamber of Commerce, Springfield IL",
       "text": "The Midwest economy has been resilient. Manufacturing has faced headwinds from trade policy uncertainty but consumers have remained solid. I am monitoring both sides of the mandate carefully.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -1,
+      "stance": 0,
+      "balance": 0,
+      "direction": -3,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -1,
+        "stance": 0,
+        "balance": 0,
+        "direction": -3,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-09-04",
       "title": "Fireside Chat at mHUB Industry Disruptor Series",
       "venue": "Chicago, Illinois",
       "text": "The industrial heartland is adapting to technology change. AI and automation are reshaping manufacturing. This matters for labor market dynamics and productivity trends that in turn affect inflation. I remain focused on both sides of the mandate.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -6,
+      "stance": 0,
+      "balance": -15,
+      "direction": -3,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -6,
+        "stance": 0,
+        "balance": -15,
+        "direction": -3,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-11-20",
       "title": "CFA Society Indianapolis Annual Lunch Fireside Chat",
       "venue": "Indianapolis, Indiana",
       "text": "Inflation has been above our target for four and a half years. Further progress has stalled for several months. Almost all the businesspeople and consumers we have spoken to in the district identify prices as their main concern. I am watching the labor market carefully.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -6,
+      "stance": 0,
+      "balance": -15,
+      "direction": -3,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -6,
+        "stance": 0,
+        "balance": -15,
+        "direction": -3,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-12-12",
       "title": "December Dissent Statement",
       "venue": "Chicago Fed",
       "text": "I dissented on the decision to cut the federal funds rate. While I voted to lower rates at the September and October meetings, I believe we should have waited to get more data, especially about inflation, before lowering rates further.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 7,
+      "stance": 0,
+      "balance": 0,
+      "direction": 20,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 7,
+        "stance": 0,
+        "balance": 0,
+        "direction": 20,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2026-02-14",
       "title": "Signals on Future Rate Cuts",
       "venue": "Media interview",
       "text": "I do think that if inflation proves to be transitory and we can show that we're on path back to 2 percent, I still think there are several more rate cuts that can happen in 2026, but we've got to see it. So far, we've basically been stalled out at 3 percent.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -14,
+      "stance": 0,
+      "balance": 0,
+      "direction": -40,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -14,
+        "stance": 0,
+        "balance": 0,
+        "direction": -40,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     }
   ],
   "schmid": [
@@ -339,56 +983,168 @@
       "title": "Outlook for the US Economy and Monetary Policy",
       "venue": "Tulsa Regional Chamber, Tulsa OK",
       "text": "Inflation has declined substantially but has not yet reached our 2 percent target. The labor market has cooled but remains solid. Given continued progress on inflation and labor market moving toward better balance, I supported beginning to remove policy restriction. We should be methodical and avoid declaring victory too early. Data will determine the pace.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -1,
+      "stance": 0,
+      "balance": -15,
+      "direction": 13,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -1,
+        "stance": 0,
+        "balance": -15,
+        "direction": 13,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-10-22",
       "title": "Economic Outlook",
       "venue": "Kansas City Business Roundtable, Kansas City MO",
       "text": "My support for the September 50bp cut should not be interpreted as urgency. Policy remains restrictive. Inflation is still above target. The labor market is healthy. I am cautious about easing too quickly. We could find ourselves in a situation where inflation reaccelerates if we remove restriction faster than justified. Patient and deliberate approach appropriate.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 13,
+      "stance": 0,
+      "balance": 0,
+      "direction": 36,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 13,
+        "stance": 0,
+        "balance": 0,
+        "direction": 36,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-11-25",
       "title": "Monetary Policy Normalization",
       "venue": "Federal Reserve Bank of Kansas City, Kansas City MO",
       "text": "We have made real progress on inflation but the job is not done. Core inflation remains above target and stickier than I would like. Labor market is at or near full employment. I would be comfortable with a pause in rate cuts to assess cumulative progress and incoming data. We are not on a preset path.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 13,
+      "stance": 0,
+      "balance": 0,
+      "direction": 36,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 13,
+        "stance": 0,
+        "balance": 0,
+        "direction": 36,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-12-18",
       "title": "Kansas City Economic Outlook",
       "venue": "Kansas City, Kansas City MO",
       "text": "I supported the December cut but am watching inflation carefully going forward. The disinflation process has stalled somewhat. Core PCE remains elevated. Labor market is solid. My estimate of neutral may be higher than the median projection. We should proceed carefully and not cut further until we see additional convincing evidence inflation is durably heading to 2 percent.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -7,
+      "stance": 0,
+      "balance": -15,
+      "direction": -4,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -7,
+        "stance": 0,
+        "balance": -15,
+        "direction": -4,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-09-26",
       "title": "Economic Conditions and Monetary Policy",
       "venue": "Kansas City Fed",
       "text": "I continue to hear concerns about inflation in my district. The economy shows continued momentum. The labor market, though cooling, remains largely in balance. I view the current stance of monetary policy as being only modestly, if at all, restrictive.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -6,
+      "stance": 0,
+      "balance": -30,
+      "direction": 13,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -6,
+        "stance": 0,
+        "balance": -30,
+        "direction": 13,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-12-12",
       "title": "December Dissent Statement",
       "venue": "Kansas City Fed",
       "text": "Inflation remains too high, the economy shows continued momentum, and the labor market, though cooling, remains largely in balance. I view the current stance of monetary policy as being only modestly, if at all, restrictive.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -1,
+      "stance": 0,
+      "balance": -15,
+      "direction": 13,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -1,
+        "stance": 0,
+        "balance": -15,
+        "direction": 13,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2026-01-15",
       "title": "The Economic Outlook and Monetary Policy",
       "venue": "Kansas City Fed event",
       "text": "This is a moment of substantial uncertainty about the economic outlook. I see little reason at this point to further lower the policy rate. The economy grew by 4.3 percent in the third quarter of 2025, far above recent historical trends. Inflation remains too high.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 10,
+      "stance": 0,
+      "balance": 15,
+      "direction": 13,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 10,
+        "stance": 0,
+        "balance": 15,
+        "direction": 13,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2026-02-11",
       "title": "Monetary Policy and the Economic Outlook",
       "venue": "Economic Forum of Albuquerque, New Mexico",
       "text": "With growth showing momentum and inflation still hot, I'm not seeing many indications of economic restraint. I therefore supported the FOMC's decision to hold rates steady in January. In my view, further rate cuts risk allowing high inflation to persist even longer.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 13,
+      "stance": 0,
+      "balance": 0,
+      "direction": 36,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 13,
+        "stance": 0,
+        "balance": 0,
+        "direction": 36,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     }
   ],
   "musalem": [
@@ -397,70 +1153,210 @@
       "title": "Economic Outlook and Monetary Policy",
       "venue": "Economic Club of Memphis, Memphis TN",
       "text": "Inflation remained too high through Q1 2024 despite earlier progress. Policy appears materially restrictive at current settings. However, neutral may be higher if underlying trend inflation is above 2 percent. I want to see more convincing data before supporting a rate cut. The labor market is near full employment. Patience and data dependence are essential.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -19,
+      "stance": 0,
+      "balance": -30,
+      "direction": -24,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -19,
+        "stance": 0,
+        "balance": -30,
+        "direction": -24,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-09-24",
       "title": "Monetary Policy Outlook",
       "venue": "St. Louis Fed, St. Louis MO",
       "text": "The September 50bp cut was appropriate given progress on both inflation and labor markets. Economy is expanding solidly. Labor market near full employment but cooling. Inflation is declining. I supported this recalibration. Going forward pace will depend on data. I see the policy rate moving gradually toward neutral. Upside and downside risks remain.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -22,
+      "stance": 0,
+      "balance": -60,
+      "direction": -4,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -22,
+        "stance": 0,
+        "balance": -60,
+        "direction": -4,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-11-13",
       "title": "Monetary Policy and the US Economic Outlook",
       "venue": "Economic Club of Memphis, Memphis TN",
       "text": "Economy expanded at a strong pace through the first three quarters on track for solid Q4. Labor market near full employment with layoffs remaining low. Inflation has made progress but is not yet at 2 percent. I supported the November cut. We are gradually removing policy restriction. The path to neutral will be gradual and data dependent.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -5,
+      "stance": 0,
+      "balance": -30,
+      "direction": 16,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -5,
+        "stance": 0,
+        "balance": -30,
+        "direction": 16,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-02-20",
       "title": "Remarks on the Economic Outlook and Alternative Scenarios",
       "venue": "Economic Club of New York",
       "text": "In my view, the economy and monetary policy are in a good place. The U.S. economy entered 2025 on a very solid footing with healthy forward momentum. Consumers continued to power growth. Personal consumption expenditures grew at a robust 4.2 percent rate in the fourth quarter.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 5,
+      "stance": 0,
+      "balance": 0,
+      "direction": 13,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 5,
+        "stance": 0,
+        "balance": 0,
+        "direction": 13,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-03-03",
       "title": "Remarks on the Economic Outlook and Monetary Policy",
       "venue": "NABE Economic Policy Conference, Washington DC",
       "text": "Monetary policy is well positioned to address risks to both sides of the Fed's dual mandate. I believe a patient policy approach now will help us as we seek maximum employment, price stability and a durable economic expansion.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 7,
+      "stance": 0,
+      "balance": -15,
+      "direction": 36,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 7,
+        "stance": 0,
+        "balance": -15,
+        "direction": 36,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-03-26",
       "title": "Remarks on the U.S. Economic Outlook and Monetary Policy",
       "venue": "Paducah Area Chamber of Commerce, Paducah KY",
       "text": "The U.S. economy is continuing to expand, but the pace of growth appears to have moderated in the first quarter. Growth is being sustained by a healthy, full-employment labor market and generally supportive financial conditions.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -6,
+      "stance": 0,
+      "balance": -30,
+      "direction": 13,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -6,
+        "stance": 0,
+        "balance": -30,
+        "direction": 13,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-05-14",
       "title": "Economic Conditions and Monetary Policy",
       "venue": "Economic Club of Minnesota, Minneapolis",
       "text": "The underlying strength of the U.S. economy, the resilient labor market, above target inflation, and some inflation expectations moving higher indicate to me that the FOMC's modestly restrictive monetary policy remains appropriate.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 4,
+      "stance": -18,
+      "balance": 15,
+      "direction": 13,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 4,
+        "stance": -18,
+        "balance": 15,
+        "direction": 13,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-09-03",
       "title": "Economic Conditions, Risks and Monetary Policy",
       "venue": "Peterson Institute for International Economics, Washington DC",
       "text": "The current modestly restrictive setting of the policy rate is consistent with full employment labor market and core inflation nearly one percentage point above the Fed's 2 percent target.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -11,
+      "stance": -18,
+      "balance": -30,
+      "direction": 13,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -11,
+        "stance": -18,
+        "balance": -30,
+        "direction": 13,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-09-22",
       "title": "Balance of Risks and Monetary Policy",
       "venue": "Brookings Institution, Washington DC",
       "text": "I supported the 25-basis-point reduction as a precautionary move to support the labor market. Recent data indicate downside risks to employment have increased. The stance of monetary policy now lies between modestly restrictive and neutral, which I view as appropriate.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -30,
+      "stance": -18,
+      "balance": -45,
+      "direction": -24,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -30,
+        "stance": -18,
+        "balance": -45,
+        "direction": -24,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2026-01-30",
       "title": "U.S. Economic Outlook and Monetary Policy",
       "venue": "Arkansas Business Forecast Luncheon, Rogers AR",
       "text": "The U.S. economy has been resilient, with considerable momentum coming into 2026. I expect the economy will continue to grow at or above trend this year. The labor market has been cooling over the past 18 months in a gradual and orderly way.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -6,
+      "stance": 0,
+      "balance": -30,
+      "direction": 13,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -6,
+        "stance": 0,
+        "balance": -30,
+        "direction": 13,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     }
   ],
   "paulson": [
@@ -469,49 +1365,147 @@
       "title": "Economic Outlook and Monetary Policy",
       "venue": "Philadelphia Business and Civic Leaders Forum, Philadelphia PA",
       "text": "The economy continues to perform well with solid growth and a healthy labor market. Inflation has declined substantially but remains above target. The FOMC has appropriately begun to recalibrate monetary policy. The pace of further easing will depend on the data. I am committed to returning inflation sustainably to 2 percent while preserving labor market strength.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -11,
+      "stance": 0,
+      "balance": 0,
+      "direction": -32,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -11,
+        "stance": 0,
+        "balance": 0,
+        "direction": -32,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-12-12",
       "title": "Philadelphia Fed Economic Outlook",
       "venue": "Philadelphia Fed, Philadelphia PA",
       "text": "Progress on both sides of the dual mandate continues. Inflation is declining but not yet at 2 percent. Labor market is cooling at an appropriate pace. We must maintain a patient and data-dependent approach. The case for further easing exists but must be balanced against the risk of easing too quickly before inflation is solidly at target.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -1,
+      "stance": 0,
+      "balance": -30,
+      "direction": 28,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -1,
+        "stance": 0,
+        "balance": -30,
+        "direction": 28,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-10-13",
       "title": "Economic Outlook",
       "venue": "NABE Annual Meeting, Philadelphia PA",
       "text": "Tariffs will increase the price level, but they won't leave a lasting imprint on inflation. Monetary policy should look through tariff effects on prices. So long as inflation expectations are anchored, increases in prices due to supply effects do not turn into an inflation proble\u2026",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -6,
+      "stance": 0,
+      "balance": 15,
+      "direction": -32,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -6,
+        "stance": 0,
+        "balance": 15,
+        "direction": -32,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-11-20",
       "title": "Economic Outlook Field Meeting",
       "venue": "Federal Reserve Bank of Philadelphia",
       "text": "The labor market is okay, but downside risks are elevated. Virtually all of the net job growth this year through September has been concentrated in healthcare and social assistance.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -9,
+      "stance": 0,
+      "balance": -30,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -9,
+        "stance": 0,
+        "balance": -30,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-12-12",
       "title": "Economic Outlook at Delaware State Chamber",
       "venue": "Delaware State Chamber of Commerce",
       "text": "The labor market is okay but downside risks are elevated. Hiring has been very concentrated in healthcare and social services, turnover is low and job finding rates are slowing. In addition, people report being more worried about losing their jobs.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -19,
+      "stance": 0,
+      "balance": -60,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -19,
+        "stance": 0,
+        "balance": -60,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2026-01-03",
       "title": "Thoughts on the U.S. Economy and the Year Ahead",
       "venue": "ASSA Annual Meeting, Philadelphia PA",
       "text": "If I had to pick a theme for inflation for 2026 it would be cautious optimism. I view the current level of the funds rate as still a little restrictive. So, the combination of past and current monetary policy restrictiveness will help to bring inflation all the way to two.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 2,
+      "stance": 0,
+      "balance": 0,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 2,
+        "stance": 0,
+        "balance": 0,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2026-01-14",
       "title": "Economic Trends and Opportunities for Philadelphia",
       "venue": "Chamber of Commerce for Greater Philadelphia Annual State of the Economy Event",
       "text": "I am feeling cautiously optimistic on inflation, and I see a decent chance that we will end the year with inflation that is close to 2 percent on a run-rate basis. I view the current level of the federal funds rate as still a little restrictive.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 2,
+      "stance": 0,
+      "balance": 0,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 2,
+        "stance": 0,
+        "balance": 0,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     }
   ],
   "hammack": [
@@ -520,63 +1514,189 @@
       "title": "Lake Effect: Views from the Fourth District",
       "venue": "City Club of Cleveland, Cleveland OH",
       "text": "The US economy is in a good position but there is more work to do on inflation. Growth has been strong. Labor market is healthy. Financial conditions have eased. Despite positive developments inflation remains elevated and recent progress has been uneven. The risk of de-anchoring expectations if inflation stalls above 2 percent is real. Modestly restrictive policy must be maintained.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -14,
+      "stance": -18,
+      "balance": 0,
+      "direction": -24,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -14,
+        "stance": -18,
+        "balance": 0,
+        "direction": -24,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-12-18",
       "title": "FOMC Dissent Statement",
       "venue": "Federal Reserve Bank of Cleveland, Cleveland OH",
       "text": "I dissented from the December rate cut because inflation remains elevated and recent progress has been uneven and slower than expected. The economy's momentum and elevated recent inflation readings led me to revise up my 2025 inflation forecast. Balance of risks skewed toward higher inflation. Policy will need to remain modestly restrictive for some time.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -9,
+      "stance": -18,
+      "balance": 15,
+      "direction": -24,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -9,
+        "stance": -18,
+        "balance": 15,
+        "direction": -24,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-02-11",
       "title": "Show Me the Low Inflation",
       "venue": "University of Kentucky Gatton College, Economic Outlook Conference",
       "text": "Given the economy's momentum heading into 2025, and with a healthy labor market, we have the luxury of being patient as we assess the path forward for inflation. We have made good progress, but 2 percent inflation is not in sight just yet.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 7,
+      "stance": 0,
+      "balance": -15,
+      "direction": 36,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 7,
+        "stance": 0,
+        "balance": -15,
+        "direction": 36,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-02-27",
       "title": "Trading Places: My New View from Inside the Federal Reserve",
       "venue": "Columbia University / Bank Policy Institute, 9th Annual SIPA/BPI Conference, New York",
       "text": "I've traded places and shifted my perspective now that I am with the Federal Reserve. Market-based expectations for the federal funds rate at the end of 2026 have increased by about 80 basis points.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -8,
+      "stance": 0,
+      "balance": 0,
+      "direction": -24,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -8,
+        "stance": 0,
+        "balance": 0,
+        "direction": -24,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-04-16",
       "title": "Fed 101: Approaching Monetary Policy with Heart, Brains, and Courage",
       "venue": "Columbus Metropolitan Club Forum, Columbus OH",
       "text": "There is uncertainty surrounding tariff policy, immigration policy and its effects on labor supply, and fiscal policy. Contacts report they have paused some spending in light of increased uncertainty. A growing share expect nonlabor costs to rise.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 13,
+      "stance": 0,
+      "balance": 0,
+      "direction": 36,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 13,
+        "stance": 0,
+        "balance": 0,
+        "direction": 36,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-05-09",
       "title": "The Outlook for the Economy and Monetary Policy",
       "venue": "Hoover Institution, Stanford University",
       "text": "Simple policy rules provide a good starting point for assessing how monetary policy may wish to respond. Our contacts report subdued economic activity. Many contacts indicate that they have paused spending in light of increased uncertainty surrounding tariffs, immigration, federa\u2026",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 13,
+      "stance": 0,
+      "balance": 0,
+      "direction": 36,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 13,
+        "stance": 0,
+        "balance": 0,
+        "direction": 36,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-11-06",
       "title": "Balancing Act: The Dual Mandate on an Economic Tightrope",
       "venue": "Economic Club of New York",
       "text": "I remain concerned about high inflation and believe policy should be leaning against it. My base case has PCE inflation rising to around 3 percent by the end of this year. It then remains elevated through much of 2026 and only gradually comes down thereafter.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 5,
+      "stance": 0,
+      "balance": 0,
+      "direction": 13,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 5,
+        "stance": 0,
+        "balance": 0,
+        "direction": 13,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-11-20",
       "title": "Remarks on Economic Outlook and Monetary Policy",
       "venue": "Federal Reserve Bank of Cleveland",
       "text": "Inflation remains too high and has continued to trend higher. I am laser-focused on inflation. The labor market remains resilient. I would not see a case for a rate cut given the latest economic data.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -8,
+      "stance": 0,
+      "balance": 0,
+      "direction": -24,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -8,
+        "stance": 0,
+        "balance": 0,
+        "direction": -24,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2026-02-10",
       "title": "Recipe for a Thriving US Economy: Strong Banks, Patient Policy, and an Independent yet Accountable Central Bank",
       "venue": "Ohio Bankers League 2026 Economic Summit, Columbus OH",
       "text": "My base case is that we can stay here with rates for some period of time, until we get clearer evidence that either inflation is coming back down to target or the employment side is weakening more materially.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -6,
+      "stance": 0,
+      "balance": -30,
+      "direction": 13,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -6,
+        "stance": 0,
+        "balance": -30,
+        "direction": 13,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     }
   ],
   "logan": [
@@ -585,112 +1705,336 @@
       "title": "Market Monitoring and Monetary Policy Implementation",
       "venue": "AEA/IBEFA Annual Meetings, San Antonio TX",
       "text": "Inflation is in a much better place than a year ago but the job is not yet complete. Challenge is finishing the work of bringing inflation sustainably to 2 percent. Economy coming into better balance. Growth settling down but not collapsing. Core PCE at around 2 percent over past six months is an improvement. We must ensure we do not ease prematurely.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -11,
+      "stance": 0,
+      "balance": 0,
+      "direction": -32,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -11,
+        "stance": 0,
+        "balance": 0,
+        "direction": -32,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-03-01",
       "title": "Quantitative Tightening Discussion",
       "venue": "US Monetary Policy Forum, New York",
       "text": "Balance sheet normalization should continue alongside rate policy as long as conditions permit. QT helps maintain appropriate financial conditions consistent with the inflation objective. Ample reserves framework is working well. We can slow QT before reserves reach their lower bound to avoid disruption. Rate policy remains primary tool.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 2,
+      "stance": 0,
+      "balance": 0,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 2,
+        "stance": 0,
+        "balance": 0,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-10-09",
       "title": "Foundational Considerations in a Changing Economy",
       "venue": "Greater Houston Partnership Energy Conference, Houston TX",
       "text": "The economy has evolved favorably. Inflation is down substantially and the labor market is coming into better balance. The September rate cut was appropriate given progress on both sides of the mandate. However, I remain attentive to upside inflation risks and will not declare victory prematurely. Data dependence remains essential going forward.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -11,
+      "stance": 0,
+      "balance": 0,
+      "direction": -32,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -11,
+        "stance": 0,
+        "balance": 0,
+        "direction": -32,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-10-21",
       "title": "Normalizing the FOMC\\",
       "venue": "SIFMA Annual Meeting, New York",
       "text": "Ample reserves framework serves us well as we normalize policy tools. Ongoing QT is proceeding smoothly. The federal funds rate remains the primary tool. We should be thoughtful about slowing QT as reserves approach their lower bound. Monetary policy normalization is proceeding on both rate and balance sheet fronts in a coordinated manner.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 2,
+      "stance": 0,
+      "balance": 0,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 2,
+        "stance": 0,
+        "balance": 0,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-11-13",
       "title": "Navigating in Shallow Waters",
       "venue": "Dallas-Kansas City Joint Energy Conference, Dallas TX",
       "text": "Monetary policy is now in shallower waters as we move closer to neutral. Strong demand persistently pushed real activity above forecasts in 2024, posing upside risks to inflation. Higher household incomes from revised national accounts could push consumption above current forecasts. A careful, data-dependent approach is warranted as we approach neutral.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 10,
+      "stance": 0,
+      "balance": 0,
+      "direction": 28,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 10,
+        "stance": 0,
+        "balance": 0,
+        "direction": 28,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-02-06",
       "title": "Future Challenges for Monetary Policy in the Americas",
       "venue": "Chapultepec Conference, BIS Americas Office, Mexico City",
       "text": "This lesson figures centrally in my thinking about monetary policy for the U.S. in the near term. I think the possible policy strategies for the FOMC in 2025 boil down to two key alternatives.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 2,
+      "stance": 0,
+      "balance": 0,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 2,
+        "stance": 0,
+        "balance": 0,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-02-25",
       "title": "Efficient and Effective Central Bank Balance Sheets",
       "venue": "Bank of England Agenda for Research Conference, London",
       "text": "In my view, a key current challenge of monetary policy implementation is how to return central bank balance sheets to more normal sizes and compositions following the expansions undertaken in response to the pandemic.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 2,
+      "stance": 0,
+      "balance": 0,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 2,
+        "stance": 0,
+        "balance": 0,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-04-10",
       "title": "Welcome Remarks: Outlook for North American Trade and Immigration",
       "venue": "Peterson Institute / Dallas Fed Conference, Dallas TX",
       "text": "To sustainably achieve both of our dual-mandate goals, it will be important to keep any tariff-related price increases from fostering more persistent inflation. For now, I believe the stance of monetary policy is well positioned.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -11,
+      "stance": 0,
+      "balance": 0,
+      "direction": -32,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -11,
+        "stance": 0,
+        "balance": 0,
+        "direction": -32,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-05-19",
       "title": "Remarks on Nonbank Institutions in Treasury and Money Markets",
       "venue": "Atlanta Fed 2025 Financial Markets Conference, Amelia Island FL",
       "text": "The Treasury market has grown substantially over the last decade. The role of nonbank institutions has expanded. Understanding these structural changes is important for assessing both financial stability risks and the transmission of monetary policy.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 2,
+      "stance": 0,
+      "balance": 0,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 2,
+        "stance": 0,
+        "balance": 0,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-07-15",
       "title": "Economic Outlook and Monetary Policy",
       "venue": "World Affairs Council of San Antonio",
       "text": "If we cut rates too soon, inflation could get stuck above our target, and households and businesses might come to expect further price increases. History teaches that when higher inflation expectations become entrenched, the road back to price stability is longer, the labor marke\u2026",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 15,
+      "stance": 0,
+      "balance": 15,
+      "direction": 28,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 15,
+        "stance": 0,
+        "balance": 15,
+        "direction": 28,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-08-25",
       "title": "Post-Pandemic Challenges for Monetary Policy Implementation",
       "venue": "Conference on the Future of Central Banking, Banco de M\u00e9xico, Mexico City",
       "text": "In my view, a key current challenge of monetary policy implementation is how to return central bank balance sheets to more normal sizes and compositions. The Fed implemented monetary policy in a regime of ample reserves, which meets banks' demand for reserves with market rates cl\u2026",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 2,
+      "stance": 0,
+      "balance": 0,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 2,
+        "stance": 0,
+        "balance": 0,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-09-30",
       "title": "Why I Will Be Cautious About Further Rate Cuts",
       "venue": "Dallas Fed Survey Participants Reception",
       "text": "More than four years after the postpandemic inflation surge began, inflation remains above the 2 percent target. While payroll gains have slowed considerably, so has labor force growth.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 2,
+      "stance": 0,
+      "balance": 0,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 2,
+        "stance": 0,
+        "balance": 0,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-10-31",
       "title": "Ample Liquidity for a Safe and Efficient Banking System",
       "venue": "The Evolving Landscape of Bank Funding Conference, Dallas Fed",
       "text": "I would have preferred to hold interest rates steady at this week's FOMC meeting. While inflation has come down significantly from the postpandemic peak, it's still not convincingly headed all the way back to 2 percent.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 10,
+      "stance": 0,
+      "balance": 0,
+      "direction": 28,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 10,
+        "stance": 0,
+        "balance": 0,
+        "direction": 28,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-11-21",
       "title": "Opening Remarks on Economic Uncertainty and Monetary Policy",
       "venue": "SNB Watchers Conference, Karl Brunner Institute",
       "text": "Uncertainty is a pervasive feature of the macroeconomy and monetary policymaking. Inflation remains too high, taxing the budgets of businesses and families, and appears likely to exceed the FOMC's 2 percent target for too much longer. Payroll job gains fell markedly in 2025.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 2,
+      "stance": 0,
+      "balance": 0,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 2,
+        "stance": 0,
+        "balance": 0,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2026-01-29",
       "title": "Introduction of FDIC Chairman at Payments Conference",
       "venue": "Payments of the Future Symposium, Dallas Fed",
       "text": "The payments landscape continues to evolve rapidly. Digital innovation creates both opportunities and risks for monetary policy transmission and financial stability. The Dallas Fed remains committed to fostering a safe, efficient payments infrastructure.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 2,
+      "stance": 0,
+      "balance": 0,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 2,
+        "stance": 0,
+        "balance": 0,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2026-02-10",
       "title": "Outlook for the Economy and Monetary Policy",
       "venue": "FIA-SIFMA Asset Management Derivatives Forum, Austin TX",
       "text": "After lowering rates at each of its last three meetings of 2025, the FOMC decided to hold the fed funds target range steady in January. I supported this decision. Last year's rate cuts put in place some additional insurance against a more rapid cooling in the labor market.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -1,
+      "stance": 0,
+      "balance": -30,
+      "direction": 28,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -1,
+        "stance": 0,
+        "balance": -30,
+        "direction": 28,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     }
   ],
   "bostic": [
@@ -699,56 +2043,168 @@
       "title": "The Arc of Monetary Policy May Start Bending Soon",
       "venue": "Atlanta Business Chronicle Economic Outlook, Atlanta GA",
       "text": "Monetary policy is sufficiently restrictive. Faster-than-expected progress on inflation, strong growth, and healthy labor market signal it may soon be appropriate to reassess. The labor market has been remarkably resilient. We must be cautious\u2014do not overtighten and damage the labor market. The time to ponder beginning to unwind restriction may soon be at hand.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -4,
+      "stance": 0,
+      "balance": -15,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -4,
+        "stance": 0,
+        "balance": -15,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-06-25",
       "title": "Economic Outlook",
       "venue": "Atlanta Fed Community Development Conference, Atlanta GA",
       "text": "Progress on inflation has been slower than expected and I have moved my first cut projection to Q4. The labor market remains strong. I need to see more convincing data before confident inflation is sustainably heading to 2 percent. I am prepared to be patient. If inflation stalls, additional tightening might be warranted.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 5,
+      "stance": 0,
+      "balance": -15,
+      "direction": 28,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 5,
+        "stance": 0,
+        "balance": -15,
+        "direction": 28,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-09-23",
       "title": "Policy Normalization",
       "venue": "Harvard Business School, Boston MA",
       "text": "Progress on inflation and cooling labor market have emerged much more quickly than I imagined at the start of summer. I envision normalizing monetary policy sooner than I thought appropriate even a few months ago. The 50bp cut puts us in a better position. We can slow if inflation picks up or accelerate if labor market weakens.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -22,
+      "stance": 0,
+      "balance": -30,
+      "direction": -32,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -22,
+        "stance": 0,
+        "balance": -30,
+        "direction": -32,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-12-09",
       "title": "Economic Outlook and Policy Path",
       "venue": "Atlanta Fed, Atlanta GA",
       "text": "The economy is in a good place but inflation has been stickier than desired. Labor market remains healthy but is cooling. I supported the November cut but see less urgency going forward. We should proceed carefully. My projection now calls for only one cut in 2025 as upside inflation risks have increased.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -9,
+      "stance": 0,
+      "balance": -15,
+      "direction": -12,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -9,
+        "stance": 0,
+        "balance": -15,
+        "direction": -12,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-07-03",
       "title": "The Dual Mandate and the Primacy of Inflation Expectations",
       "venue": "Institute for Monetary and Financial Stability, Frankfurt",
       "text": "Surveying the macroeconomy today, uncertainty persists along virtually every dimension central bankers consider in formulating monetary policy. For now, labor market conditions remain broadly healthy, even as signs point to softening.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -4,
+      "stance": 0,
+      "balance": -15,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -4,
+        "stance": 0,
+        "balance": -15,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-11-12",
       "title": "Weighing the Risks: Why Inflation Tips the Scales",
       "venue": "Atlanta Economics Club",
       "text": "I see little to suggest that price pressures will dissipate before mid- to late 2026, at the earliest. Evidence from all three surveys points decisively in one direction \u2014 continued upward pressure on costs and prices.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 2,
+      "stance": 0,
+      "balance": 0,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 2,
+        "stance": 0,
+        "balance": 0,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2026-01-30",
       "title": "FOMC January Hold Discussion",
       "venue": "CNBC Interview, Atlanta Fed",
       "text": "My concern for the past three or four years has been that inflation is too high, and we've got to get it down to the 2 percent target. We've made good progress, but for the last two years or so we've been kind of stuck in this high 2s, low 3s range.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 2,
+      "stance": 0,
+      "balance": 0,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 2,
+        "stance": 0,
+        "balance": 0,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2026-02-02",
       "title": "Bostic Discusses Recent FOMC Decision to Hold Rate Steady",
       "venue": "Atlanta Fed / CNBC",
       "text": "I believe we should be waiting and be more patient on rate cuts. The FOMC's January hold was the right decision. While contacts in the district reported a more muted response to tariff cost pass-through than prior surveys suggested, the risk that inflation stays elevated remains\u2026",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 10,
+      "stance": 0,
+      "balance": 0,
+      "direction": 28,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 10,
+        "stance": 0,
+        "balance": 0,
+        "direction": 28,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     }
   ],
   "daly": [
@@ -757,56 +2213,168 @@
       "title": "SIEPR Economic Summit",
       "venue": "Stanford Institute for Economic Policy Research, Stanford CA",
       "text": "Inflation remains too high but progress is happening. Recent elevated readings are disappointing but a few months do not define a trend. Labor market is strong. Policy is working. I need several more months of data confirming progress before confidence to cut. We have the luxury of time given strong economic conditions.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -11,
+      "stance": 0,
+      "balance": 0,
+      "direction": -32,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -11,
+        "stance": 0,
+        "balance": 0,
+        "direction": -32,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-06-24",
       "title": "Monetary Policy and the Labor Market",
       "venue": "Commonwealth Club, San Francisco CA",
       "text": "Policy is restrictive and working. The question is when to begin normalizing. I do not want to leave rates too high too long and take an excessive toll on the labor market. Supply factors have contributed importantly to disinflation. Both sides of the mandate now warrant close attention.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -4,
+      "stance": 0,
+      "balance": -15,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -4,
+        "stance": 0,
+        "balance": -15,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-09-23",
       "title": "Landing Softly Is Just the Beginning",
       "venue": "Economic Club, New York",
       "text": "The September 50bp cut was the right move. Real rates were rising into an economy where inflation approached 2 percent and the labor market was cooling. This was appropriate recalibration not emergency action. Policy remains moderately restrictive after the cut. The goal is low inflation and a healthy labor market that works for all.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -32,
+      "stance": -35,
+      "balance": -30,
+      "direction": -32,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -32,
+        "stance": -35,
+        "balance": -30,
+        "direction": -32,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-12-12",
       "title": "Monetary Policy and Economic Outlook",
       "venue": "Hoover Institution, Stanford CA",
       "text": "Two more cuts this year or one more\u2014either spans the reasonable range. Policy is still restrictive. Labor market is solid. Inflation is near but not at target. We are data dependent. Cannot safely incorporate higher immigration assumptions into baseline. Supply uncertainty is elevated. Do not want to move faster than data warrant.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -2,
+      "stance": 0,
+      "balance": -15,
+      "direction": 8,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -2,
+        "stance": 0,
+        "balance": -15,
+        "direction": 8,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-09-30",
       "title": "Economic Outlook",
       "venue": "Silicon Valley Leadership Group event, San Jose State",
       "text": "The labor market has softened at a pretty good clip. It has come down rapidly from its highs. But the level of where it is sitting right now is not weak, but you want to prevent that weakness because once it tips into weakness, it is extremely difficult to turn around.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -4,
+      "stance": 0,
+      "balance": -15,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -4,
+        "stance": 0,
+        "balance": -15,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2026-01-09",
       "title": "What is Actually Happening in the Economy",
       "venue": "Kyla Scanlon podcast",
       "text": "We've come out of this period where we had high inflation, really high inflation, and a just good labor market and solid GDP growth. Now we're in a period where it looks like GDP growth is okay and the labor market has softened. So we had a policy move to try to offset that.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -4,
+      "stance": 0,
+      "balance": -15,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -4,
+        "stance": 0,
+        "balance": -15,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2026-02-06",
       "title": "Americans Deserve Price Stability and Full Employment",
       "venue": "LinkedIn post and media",
       "text": "We must watch both sides of our mandate. Businesses are leaning towards cautious optimism. Growth is good. Consumer spending has been reassuring. The job market is recovering and productivity gains are curbing costs.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 2,
+      "stance": 0,
+      "balance": 0,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 2,
+        "stance": 0,
+        "balance": 0,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2026-02-17",
       "title": "The AI Moment? Possibilities, Productivity, and Policy",
       "venue": "San Jose State University",
       "text": "Current monetary policy is well-positioned to manage a stabilizing labor market and a steady descent toward the 2 percent inflation target. After last year's 75 basis points in rate cuts, the federal funds rate is in the current 3.50 to 3.75 percent range.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -16,
+      "stance": 0,
+      "balance": -15,
+      "direction": -32,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -16,
+        "stance": 0,
+        "balance": -15,
+        "direction": -32,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     }
   ],
   "barkin": [
@@ -815,84 +2383,252 @@
       "title": "Economic Outlook 2024",
       "venue": "Raleigh Chamber Launch 2024, Raleigh NC",
       "text": "The economy finished 2023 better than expected. Inflation has come down rapidly. But the job is not yet complete. Labor market remains resilient. I expect some slowing in 2024 from restrictive policy. Progress on inflation has been impressive but early 2024 data may bring some bumps. I want to see sustained evidence before concluding the inflation fight is won.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -4,
+      "stance": 0,
+      "balance": -15,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -4,
+        "stance": 0,
+        "balance": -15,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-04-04",
       "title": "How You Might Look at Recent Data",
       "venue": "Home Building Association, Richmond VA",
       "text": "Early 2024 inflation data has been discouraging after 2023's good performance. Whether this is a bump or a real shift is the key question. Demand remains robust. The labor market is remarkably resilient. All this tightening will eventually slow the economy. I need more data before gaining confidence to ease policy.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -16,
+      "stance": 0,
+      "balance": -15,
+      "direction": -32,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -16,
+        "stance": 0,
+        "balance": -15,
+        "direction": -32,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-05-06",
       "title": "Navigating Data Whiplash",
       "venue": "Maryland Bankers Forum, Maryland",
       "text": "Data whiplash: seven good months followed by three disappointing ones. Private domestic final purchases grew robustly. Unemployment at 3.9 percent. The question is whether recent inflation readings are a bump or a trend shift. Strong labor market means we have time to gain more confidence before easing.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -14,
+      "stance": 0,
+      "balance": -45,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -14,
+        "stance": 0,
+        "balance": -45,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-10-02",
       "title": "Why Not Declare Victory?",
       "venue": "UNCW Economic Outlook Conference, Wilmington NC",
       "text": "The September 50bp cut was a recalibration to a less restrictive stance, not a signal of economic fragility. Inflation has made real progress but uncertainty on both inflation and employment remains significant. GDP at 3 percent in Q2. Consumer spending at 3.1 percent annualized. We must be attentive and learn as we go.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -16,
+      "stance": 0,
+      "balance": -15,
+      "direction": -32,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -16,
+        "stance": 0,
+        "balance": -15,
+        "direction": -32,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-01-03",
       "title": "2025 Economic Outlook",
       "venue": "Richmond Fed",
       "text": "I expect the story for the coming year to be more about supply and demand \u2014 and perhaps geopolitics \u2014 than monetary policy. That said, the Fed remains well positioned regardless of how the economy develops.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 2,
+      "stance": 0,
+      "balance": 0,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 2,
+        "stance": 0,
+        "balance": 0,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-03-27",
       "title": "Driving through Economic Fog",
       "venue": "Richmond Fed",
       "text": "How does one drive in fog? Carefully and slowly, and if there's a safe place to pull over, you do so to avoid getting in trouble. That's where we are. At our last meeting, the FOMC held the federal funds rate steady.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 2,
+      "stance": 0,
+      "balance": 0,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 2,
+        "stance": 0,
+        "balance": 0,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-06-26",
       "title": "Forecasting Beyond Today\\",
       "venue": "Richmond Fed",
       "text": "We face the same fog as businesses and consumers. At our last meeting, the FOMC held the federal funds rate steady. Given the strength in today's economy, we have time to track developments patiently and allow the visibility to improve.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 10,
+      "stance": 0,
+      "balance": 0,
+      "direction": 28,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 10,
+        "stance": 0,
+        "balance": 0,
+        "direction": 28,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-08-12",
       "title": "Why the Consumer Matters",
       "venue": "Health Management Academy, Chicago",
       "text": "Over the last several months I've been saying it's really hard to drive when it's foggy. In the context of high uncertainty about implications of government policy changes, businesses have been on pause. But the fog is lifting. We have seen consumer spending soften.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 10,
+      "stance": 0,
+      "balance": 0,
+      "direction": 28,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 10,
+        "stance": 0,
+        "balance": 0,
+        "direction": 28,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-09-26",
       "title": "Staying Sanguine About the Horizon",
       "venue": "Peterson Institute for International Economics, Washington DC",
       "text": "The ground may look shaky on both sides of our mandate, causing some to stress that the economy will lose its balance. But if you focus on the horizon, the path forward feels more stable.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 2,
+      "stance": 0,
+      "balance": 0,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 2,
+        "stance": 0,
+        "balance": 0,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-11-18",
       "title": "Operating with Limited Data",
       "venue": "Shenandoah University, Winchester VA",
       "text": "We have been operating with limited government data for almost seven weeks. The good news is that we aren't navigating blind. We have other ways to keep a pulse on the economy.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 2,
+      "stance": 0,
+      "balance": 0,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 2,
+        "stance": 0,
+        "balance": 0,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2026-01-06",
       "title": "Tuning In: 2026 Outlook",
       "venue": "Raleigh Chamber of Commerce, Raleigh NC",
       "text": "Against all odds, the economy has stayed solid. Tariffs pushed up input costs, but their impact on prices has been muted because consumers, exhausted by higher prices, have pushed back.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 2,
+      "stance": 0,
+      "balance": 0,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 2,
+        "stance": 0,
+        "balance": 0,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2026-02-03",
       "title": "U.S. Economy: The Road Ahead",
       "venue": "SC First Steps Pastides Alumni Center, Columbia SC",
       "text": "As we move into 2026, it feels like the fog is starting to lift. The road ahead is coming back into focus, and once again we are seeing an economy that remains remarkably resilient.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 2,
+      "stance": 0,
+      "balance": 0,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 2,
+        "stance": 0,
+        "balance": 0,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     }
   ],
   "kashkari": [
@@ -901,91 +2637,273 @@
       "title": "Policy Has Tightened a Lot. How Tight Is It?",
       "venue": "Minneapolis Fed Essay, Minneapolis MN",
       "text": "Supply-side improvements appear to be the primary driver of disinflation rather than tight monetary policy. This suggests policy may not be as tight as the nominal rate implies. Long-run inflation expectations remain well anchored. We have more room to be patient and assess data. Strong real activity alongside falling inflation warrants careful interpretation before easing.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 12,
+      "stance": 0,
+      "balance": 15,
+      "direction": 20,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 12,
+        "stance": 0,
+        "balance": 15,
+        "direction": 20,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-09-23",
       "title": "Why I Supported Cutting Rates Last Week",
       "venue": "Minneapolis Fed Essay, Minneapolis MN",
       "text": "I supported the 50bp cut because inflation has made substantial progress and the labor market is cooling. Real rates were rising passively without Fed action, effectively tightening policy. We are still in net tight territory after 50bp. I expect smaller steps going forward. Labor market is strong but I want to keep it that way.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -24,
+      "stance": 0,
+      "balance": -30,
+      "direction": -40,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -24,
+        "stance": 0,
+        "balance": -30,
+        "direction": -40,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-11-15",
       "title": "Monetary Policy Outlook",
       "venue": "Buenos Aires Money and Banking Conference, Argentina",
       "text": "US inflation progress has been substantial and the labor market has cooled appropriately. Fed credibility is paramount. Policy remains restrictive. After the initial 50bp cut and subsequent 25bp, we are still above neutral. We will proceed carefully. Continued data-dependent approach is appropriate given remaining uncertainties on the inflation path.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -5,
+      "stance": 0,
+      "balance": -15,
+      "direction": 0,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -5,
+        "stance": 0,
+        "balance": -15,
+        "direction": 0,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-12-19",
       "title": "Monetary Policy and Economic Conditions",
       "venue": "Rochester Forum, Minnesota",
       "text": "Inflation has made enormous progress but remains above 2 percent. The labor market is in good shape. Recent data has been somewhat more mixed. I supported the December 25bp cut but the pace of easing should be patient going forward. The natural rate may be higher than pre-pandemic estimates. We are getting closer to neutral.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 2,
+      "stance": 0,
+      "balance": -15,
+      "direction": 20,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 2,
+        "stance": 0,
+        "balance": -15,
+        "direction": 20,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-03-26",
       "title": "Fed Listens: Economic Outlook at Detroit Lakes Chamber Summit",
       "venue": "Detroit Lakes, Minnesota",
       "text": "The Federal Reserve is committed to fostering conditions that lead to stable prices and maximum employment. Tariffs present a special challenge because monetary policy can either push both inflation and economic activity up or push them both down.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -6,
+      "stance": 0,
+      "balance": -15,
+      "direction": -3,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -6,
+        "stance": 0,
+        "balance": -15,
+        "direction": -3,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-05-27",
       "title": "Monetary Policy Challenges in an Uncertain Economy",
       "venue": "Bank of Japan IMES Conference, Tokyo",
       "text": "Understanding the current tariff shock itself is more straightforward: large increases in tariffs will increase inflation and decrease economic activity, at least in the short run.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -14,
+      "stance": 0,
+      "balance": 0,
+      "direction": -40,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -14,
+        "stance": 0,
+        "balance": 0,
+        "direction": -40,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-09-03",
       "title": "Q&A at Minnesota Women\\",
       "venue": "Minneapolis, Minnesota",
       "text": "The economy has been remarkably resilient in the face of significant policy uncertainty. Inflation has come down from its peak but remains above our 2 percent target. The labor market has softened but is not showing signs of acute distress.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -19,
+      "stance": 0,
+      "balance": -15,
+      "direction": -40,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -19,
+        "stance": 0,
+        "balance": -15,
+        "direction": -40,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-10-09",
       "title": "Conversation with Federal Reserve Governor Michael Barr",
       "venue": "Economic Club of Minnesota, Golden Valley MN",
       "text": "We have inflation that's still too high, running at about 3 percent. Some sectors of the U.S. economy look like they're doing great. Some sectors of the labor market look like they're under pressure.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -6,
+      "stance": 0,
+      "balance": -15,
+      "direction": -3,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -6,
+        "stance": 0,
+        "balance": -15,
+        "direction": -3,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-10-16",
       "title": "Q&A in Rapid City, South Dakota",
       "venue": "Rapid City, South Dakota",
       "text": "Monetary policy is in a reasonable place but we need to remain data-dependent. The labor market is cooling but not collapsing. Inflation is above target but trending in the right direction. I am cautiously optimistic about the outlook.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -5,
+      "stance": 0,
+      "balance": -15,
+      "direction": 0,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -5,
+        "stance": 0,
+        "balance": -15,
+        "direction": 0,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-11-17",
       "title": "Conversation with Christophe Beck at Economic Club of Minnesota",
       "venue": "Economic Club of Minnesota, Golden Valley MN",
       "text": "We have inflation that's still too high, running at about 3 percent. Some sectors of the US economy look like they're doing great. Some sectors of the labor market look like they're under pressure.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -6,
+      "stance": 0,
+      "balance": -15,
+      "direction": -3,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -6,
+        "stance": 0,
+        "balance": -15,
+        "direction": -3,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2026-01-04",
       "title": "ASSA Session: Lessons from Bill Spriggs\\",
       "venue": "ASSA Annual Meeting, Philadelphia PA",
       "text": "The labor market has been a crucial lens through which to evaluate monetary policy. Inclusive growth and maximum employment are not separate from price stability \u2014 they are interconnected.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -12,
+      "stance": 0,
+      "balance": -30,
+      "direction": -3,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -12,
+        "stance": 0,
+        "balance": -30,
+        "direction": -3,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2026-01-14",
       "title": "Virtual Town Hall with Wisconsin Bankers Association",
       "venue": "Virtual event",
       "text": "I think inflation is still too high. And the big question in my mind is how tight is monetary policy. The economy has proven to be far more resilient than I had expected. That tells me monetary policy must not be putting that much downward pressure on the economy.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -1,
+      "stance": 0,
+      "balance": 0,
+      "direction": -3,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -1,
+        "stance": 0,
+        "balance": 0,
+        "direction": -3,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2026-02-19",
       "title": "Q&A at Midwest Economic Outlook Summit",
       "venue": "Fargo, North Dakota",
       "text": "I am a 2026 voter on the FOMC and approach each meeting fresh. The January inflation data was encouraging. If the data continue to show progress on inflation while the labor market cools, there may be room for further adjustments this year.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -6,
+      "stance": 0,
+      "balance": -15,
+      "direction": -3,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -6,
+        "stance": 0,
+        "balance": -15,
+        "direction": -3,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     }
   ],
   "collins": [
@@ -994,56 +2912,168 @@
       "title": "Economic Progress and Implications for Monetary Policy",
       "venue": "Massachusetts Technology Leadership Council, Boston MA",
       "text": "Progress on inflation has been notable but uneven. The labor market remains strong with unemployment near historic lows. Considerable uncertainty remains about the path of disinflation. We need more evidence to be confident inflation is sustainably on track to 2 percent. Patience is appropriate before adjusting policy. I want to avoid moving too soon only to have to reverse course.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -14,
+      "stance": 0,
+      "balance": -45,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -14,
+        "stance": 0,
+        "balance": -45,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-10-07",
       "title": "The US Economic Outlook and Monetary Policy",
       "venue": "Boston Economic Club, Boston MA",
       "text": "The economy is in a good place. Inflation has declined substantially toward our 2 percent objective. Labor market is cooling from a very tight level to something more sustainable. The September cut was appropriate recalibration. Looking ahead I will be attentive to both upside risks to inflation and downside risks to the labor market. We must maintain sufficient restraint to complete the task on inflation.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -27,
+      "stance": 0,
+      "balance": -45,
+      "direction": -32,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -27,
+        "stance": 0,
+        "balance": -45,
+        "direction": -32,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-05-08",
       "title": "Reflections on Uncertainty and Patience in Monetary Policymaking",
       "venue": "Boston Fed, Boston MA",
       "text": "Patience is needed before cutting rates given uncertainty about the inflation path. Progress has been slower and bumpier than anticipated. We cannot be confident inflation will return to 2 percent on a sustainable basis until we see more evidence. Labor market remains strong. Supply and demand are coming into better balance. The appropriate response to uncertainty is to wait for more information.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 5,
+      "stance": 0,
+      "balance": -15,
+      "direction": 28,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 5,
+        "stance": 0,
+        "balance": -15,
+        "direction": 28,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-11-20",
       "title": "Perspectives on the Economy and Policy",
       "venue": "Boston Fed, Boston MA",
       "text": "The economy is in a good place overall, with inflation heading back to 2 percent amid a healthy labor market. The primary task is sustaining these favorable conditions. Most remaining elevation in inflation comes from shelter. Labor market normalization and solid productivity growth contributed importantly to disinflation. Little scope for wages to disrupt the ongoing disinflation process.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -4,
+      "stance": 0,
+      "balance": -15,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -4,
+        "stance": 0,
+        "balance": -15,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-03-06",
       "title": "Economic Outlook",
       "venue": "New England CEO Summit",
       "text": "I favor a patient approach to monetary policy adjustments. Inflation remains above target. The labor market is cooling gradually. I want more evidence that inflation is moving durably toward 2 percent before supporting additional rate cuts.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 10,
+      "stance": 0,
+      "balance": 0,
+      "direction": 28,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 10,
+        "stance": 0,
+        "balance": 0,
+        "direction": 28,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-09-30",
       "title": "Views on Current Economic Conditions and Monetary Policy",
       "venue": "Council on Foreign Relations, New York",
       "text": "Monetary policy is currently well positioned. While the pace of economic activity has moderated in recent months, the U.S. economy continues to exhibit underlying strength. Despite some cooling, the labor market has shown resilience and remains at or near full employment.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -14,
+      "stance": 0,
+      "balance": -45,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -14,
+        "stance": 0,
+        "balance": -45,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-11-12",
       "title": "Economic Conditions and Monetary Policy",
       "venue": "Boston Fed Annual Meeting",
       "text": "The economy continues to expand at a moderate pace. Labor market conditions have softened somewhat. Inflation remains above our 2 percent target. I believe the current stance of monetary policy is appropriate given the balance of risks.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 2,
+      "stance": 0,
+      "balance": 0,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 2,
+        "stance": 0,
+        "balance": 0,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-06-25",
       "title": "Perspectives on the Economy",
       "venue": "Wellington Management Institutional Investors Forum, Boston",
       "text": "Economic conditions remain resilient; however, the outlook is still clouded by significant uncertainty, especially as it relates to trade policy. I see monetary policy as currently well positioned, and I supported the FOMC decision to maintain the target range at 4\u00bc to 4\u00bd percent\u2026",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 2,
+      "stance": 0,
+      "balance": 0,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 2,
+        "stance": 0,
+        "balance": 0,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     }
   ],
   "kugler": [
@@ -1052,35 +3082,105 @@
       "title": "Disinflation Progress and Monetary Policy",
       "venue": "Brookings Institution, Washington DC",
       "text": "Inflation remains too high but I am encouraged by progress. Data give cautious optimism we are on track. Progress may have paused in Q1 but information since points to renewal. Prices are being adjusted less frequently, a positive sign. Monetary policy is working and is appropriately restrictive. Continued careful calibration needed.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 15,
+      "stance": 0,
+      "balance": 15,
+      "direction": 28,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 15,
+        "stance": 0,
+        "balance": 15,
+        "direction": 28,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-06-18",
       "title": "Economic Outlook and Monetary Policy",
       "venue": "Peterson Institute, Washington DC",
       "text": "Supply-side improvements including immigration and productivity have contributed importantly to disinflation alongside restrictive monetary policy. The labor market is strong. Inflation has come down substantially. I am cautiously optimistic we are on track to reach 2 percent. Both mandate goals are being served by current stance.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -4,
+      "stance": 0,
+      "balance": -15,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -4,
+        "stance": 0,
+        "balance": -15,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-12-03",
       "title": "Labor Market and Monetary Policy",
       "venue": "Harvard Kennedy School, Cambridge MA",
       "text": "The economy is in a good place after significant progress on both goals. Labor market remains solid. Inflation appears on a sustainable path to 2 percent despite some bumps. Positive supply shocks from immigration and productivity help explain 2024's strong performance. Policy should continue recalibrating toward neutral carefully.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -16,
+      "stance": 0,
+      "balance": -15,
+      "direction": -32,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -16,
+        "stance": 0,
+        "balance": -15,
+        "direction": -32,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-04-22",
       "title": "Economic Outlook and Monetary Policy",
       "venue": "Georgetown University",
       "text": "Inflation has made substantial progress toward our 2 percent goal. The labor market remains resilient but shows signs of moderation. Policy is at a modestly restrictive level and I believe continued normalization is appropriate as inflation trends lower.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -9,
+      "stance": -18,
+      "balance": -15,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -9,
+        "stance": -18,
+        "balance": -15,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-11-18",
       "title": "Economic Conditions",
       "venue": "Economic Club of New York",
       "text": "Economic activity is expanding at a moderate pace. Consumer spending has softened for lower-income households. Labor market conditions have cooled. Inflation remains somewhat elevated but is trending in the right direction.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 10,
+      "stance": 0,
+      "balance": 0,
+      "direction": 28,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 10,
+        "stance": 0,
+        "balance": 0,
+        "direction": 28,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     }
   ],
   "williams": [
@@ -1089,49 +3189,147 @@
       "title": "Balancing Act: Decisions in the Face of Uncertainty",
       "venue": "Nassau County Economic Summit, Long Island NY",
       "text": "The economy is in a great place. Inflation has been coming down. The labor market is solid. The Fed has begun to dial back restriction with the September 50bp cut. Inflation is still above our 2 percent longer-run goal but on a path to get there. The labor market remains healthy with unemployment near its longer-run level. The process of bringing inflation back to 2 percent is still ongoing.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -27,
+      "stance": 0,
+      "balance": -45,
+      "direction": -32,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -27,
+        "stance": 0,
+        "balance": -45,
+        "direction": -32,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-11-20",
       "title": "Monetary Policy and the Economy",
       "venue": "Society of American Business Editors, New York",
       "text": "We have made significant progress on both sides of our dual mandate. Inflation has come down considerably from its peak. The labor market remains solid but has cooled to be more in balance. Following our November 25bp cut, policy is still moderately restrictive. We are well positioned to continue adjusting as we see the data evolve.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -27,
+      "stance": -35,
+      "balance": -15,
+      "direction": -32,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -27,
+        "stance": -35,
+        "balance": -15,
+        "direction": -32,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-01-10",
       "title": "Rules of Three: Prospects for 2024",
       "venue": "Bronx EDC Regional Economic Outlook, New York",
       "text": "Inflation has fallen from a 40-year high to 2.5 percent. Labor market remains strong at under 4 percent unemployment for two years\u2014longest stretch in five decades. Still more work to do to get to 2 percent. I expect GDP to slow to 1.25 percent, unemployment to rise to 4 percent, PCE inflation to reach 2.25 percent. Policy is appropriately restrictive.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -14,
+      "stance": 0,
+      "balance": -45,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -14,
+        "stance": 0,
+        "balance": -45,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-02-28",
       "title": "There and Back Again",
       "venue": "Business Leaders Forum, New York",
       "text": "Inflation shot up and is coming back down but the journey is not yet complete. Labor market is returning to normal with unemployment near its longer-run level. Still elevated job openings and wage growth signal some remaining tightness. We are focused on bringing inflation fully to 2 percent while maintaining strong employment. Restrictive policy is working but we need more data.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -14,
+      "stance": 0,
+      "balance": -45,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -14,
+        "stance": 0,
+        "balance": -45,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-05-30",
       "title": "Finding Balance in the Economy",
       "venue": "Economic Club of New York, New York",
       "text": "Considerable progress toward our goals. Labor market returning to normal. Inflation has declined substantially but still has a ways to go to reach 2 percent. Data points to slowing but still solid growth. Policy is appropriately restrictive and we need to sustain this stance until confident inflation is on track to 2 percent.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -4,
+      "stance": 0,
+      "balance": -15,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -4,
+        "stance": 0,
+        "balance": -15,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-12-15",
       "title": "Resilience",
       "venue": "New Jersey Bankers Association, Jersey City NJ",
       "text": "In fact, if I had to choose one word to describe 2025, it is uncertainty. What is striking is that despite all the uncertainty, the U.S. economy has shown considerable resilience and looks poised to pick up steam next year.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 2,
+      "stance": 0,
+      "balance": 0,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 2,
+        "stance": 0,
+        "balance": 0,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2026-01-12",
       "title": "A Few Words for the New Year",
       "venue": "New York Fed",
       "text": "The resilience we have been seeing means the economy is poised for solid growth and a return to price stability. Since I mentioned often used words in 2025, allow me to dive further into tariffs.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 2,
+      "stance": 0,
+      "balance": 0,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 2,
+        "stance": 0,
+        "balance": 0,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     }
   ],
   "barr": [
@@ -1140,35 +3338,105 @@
       "title": "Monetary Policy and Financial Stability",
       "venue": "Foreign Policy for America Summit, Washington DC",
       "text": "The US economy has been resilient and the labor market remains strong. Inflation has come down significantly from its peak but is still above our 2 percent goal. Policy remains restrictive and is helping bring inflation down gradually. We will hold rates at their current level until we have greater confidence that inflation is moving sustainably toward 2 percent.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 5,
+      "stance": 0,
+      "balance": -15,
+      "direction": 28,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 5,
+        "stance": 0,
+        "balance": -15,
+        "direction": 28,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-09-10",
       "title": "Monetary Policy and Economic Outlook",
       "venue": "Brookings Institution, Washington DC",
       "text": "The economy has made substantial progress on both inflation and the labor market. Inflation has come down significantly. The labor market has been resilient. With inflation continuing to decline and the labor market cooling, the time has come to dial back the degree of restriction. We must balance risks carefully and remain data dependent.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -8,
+      "stance": 0,
+      "balance": -30,
+      "direction": 8,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -8,
+        "stance": 0,
+        "balance": -30,
+        "direction": 8,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-11-14",
       "title": "Economic Outlook and Banking Regulation",
       "venue": "Federal Reserve, Washington DC",
       "text": "The economy remains solid. Inflation progress has been substantial. Labor market conditions are healthy. The September and November cuts reflect appropriate recalibration. Bank capital and financial stability remain strong. We will continue to be attentive to both sides of the dual mandate as we navigate remaining uncertainty.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -16,
+      "stance": 0,
+      "balance": -15,
+      "direction": -32,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -16,
+        "stance": 0,
+        "balance": -15,
+        "direction": -32,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-05-08",
       "title": "Economic Outlook",
       "venue": "Peterson Institute",
       "text": "The economic outlook is uncertain. Labor market conditions have moderated. Inflation has risen since earlier in the year and remains somewhat elevated. Policy uncertainty from tariffs makes forecasting difficult. I support the Committee's data-dependent approach.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -2,
+      "stance": 0,
+      "balance": -15,
+      "direction": 8,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -2,
+        "stance": 0,
+        "balance": -15,
+        "direction": 8,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-11-18",
       "title": "Economic Conditions",
       "venue": "American University",
       "text": "Monetary policy is focused on achieving our dual mandate. Inflation remains above target but is trending in the right direction. Labor market conditions have cooled. The Fed needs to balance both sides of the mandate carefully.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 7,
+      "stance": 0,
+      "balance": 15,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 7,
+        "stance": 0,
+        "balance": 15,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     }
   ],
   "harker": [
@@ -1177,35 +3445,105 @@
       "title": "Final Mile of the Marathon Against Inflation",
       "venue": "University of Delaware, Newark DE",
       "text": "We are in the final mile. The time to cut rates is near but has not yet arrived. Core PCE has been running essentially at 2 percent on a six-month trend. Trust but verify\u2014I have confidence monetary policy is working but need more data confirming sustainability. Inflation remains above target. Labor market has returned to balance. GDP is solid. Policy is appropriately restrictive; we should allow it to continue working.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -9,
+      "stance": 0,
+      "balance": 15,
+      "direction": -40,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -9,
+        "stance": 0,
+        "balance": 15,
+        "direction": -40,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-06-17",
       "title": "The Best Answers Start with the Right Questions",
       "venue": "Global Interdependence Center, Philadelphia PA",
       "text": "Monetary policy remains in restrictive territory to bring inflation to 2 percent while minimizing broader economic risks. Data have been choppy. Progress in many categories: food prices flat, vehicles cheaper, but shelter inflation stubbornly high. Services inflation remains a concern. Not yet at the verified moment to cut. The labor market has largely returned to balance. Policy is working but needs more time.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -14,
+      "stance": 0,
+      "balance": 0,
+      "direction": -40,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -14,
+        "stance": 0,
+        "balance": 0,
+        "direction": -40,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-09-20",
       "title": "The Federal Reserve: More Than Just Interest Rates",
       "venue": "Tulane University, New Orleans LA",
       "text": "The economy is resilient. Inflation has made significant progress from peak levels. Labor market has largely returned to pre-pandemic balance. The FOMC has begun to recalibrate policy to reflect this progress. But we must continue to be certain and deliberate as economic uncertainties remain. Policy must continue working through the remaining distance to 2 percent.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -19,
+      "stance": 0,
+      "balance": -15,
+      "direction": -40,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -19,
+        "stance": 0,
+        "balance": -15,
+        "direction": -40,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-11-14",
       "title": "Economic Outlook and Monetary Policy",
       "venue": "Villanova School of Business, Villanova PA",
       "text": "America's economy remains resilient with no dangerous cracks in the foundation. But there are stressors and uncertainty is high. We must work within what we know is happening, not what we wish to see. Policy recalibration begun in September is appropriate. Inflation has made substantial progress but is still above target. Deliberate, data-dependent approach remains the right posture.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": 5,
+      "stance": 0,
+      "balance": 15,
+      "direction": 0,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 5,
+        "stance": 0,
+        "balance": 15,
+        "direction": 0,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-04-08",
       "title": "Economic Conditions and Policy",
       "venue": "Philadelphia Fed",
       "text": "The economy is in a good place overall. Inflation has made significant progress. Labor market conditions are solid. I support a continued but careful approach to policy normalization. I want to see inflation moving clearly and sustainably toward 2 percent.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -6,
+      "stance": 0,
+      "balance": -15,
+      "direction": -3,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -6,
+        "stance": 0,
+        "balance": -15,
+        "direction": -3,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     }
   ],
   "cook": [
@@ -1214,35 +3552,105 @@
       "title": "Sources of Uncertainty in the Short and Long Run",
       "venue": "Princeton University, Princeton NJ",
       "text": "Risks to achieving employment and inflation goals are moving into better balance after being weighted toward excessive inflation. I now see two-sided risks: easing too soon and letting inflation stay persistently high versus easing too late and causing unnecessary harm. Labor demand has slowed along the hiring margin. Layoffs remain low. I intend to closely monitor incoming data to determine whether disinflation is continuing.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -8,
+      "stance": 0,
+      "balance": -30,
+      "direction": 8,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -8,
+        "stance": 0,
+        "balance": -30,
+        "direction": 8,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-06-25",
       "title": "Moving Toward Better Balance and Implications for Monetary Policy",
       "venue": "Economic Club of New York, New York",
       "text": "The economy is moving toward better balance. Inflation has come down considerably but remains above 2 percent. Labor market is cooling gradually. Given progress on both sides of the mandate the recalibration of policy can begin when appropriate. If labor market and inflation continue progressing it could be appropriate to lower restriction over time. I remain data-dependent and will adjust if conditions change.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -8,
+      "stance": 0,
+      "balance": -30,
+      "direction": 8,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -8,
+        "stance": 0,
+        "balance": -30,
+        "direction": 8,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-11-20",
       "title": "Economic Outlook and Monetary Policy",
       "venue": "University of Virginia, Charlottesville VA",
       "text": "Inflation progress has been gradual. Labor market is cooling appropriately. Given the progress we have made on both sides of the mandate, I support recalibrating policy toward neutral over time. I could see pausing if inflation progress slows while labor market remains solid, or easing more quickly if the labor market weakens substantially. Dual mandate risks are roughly balanced.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -22,
+      "stance": 0,
+      "balance": -30,
+      "direction": -32,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -22,
+        "stance": 0,
+        "balance": -30,
+        "direction": -32,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2024-10-14",
       "title": "Economic Outlook and Monetary Policy",
       "venue": "Women for Women Summit, Charleston SC",
       "text": "We have made substantial progress toward our goals. Inflation has fallen significantly from its peak and the labor market has come into better balance. The recalibration of policy begun in September is appropriate given this progress. I am watching carefully for signs of labor market deterioration. Balanced risks now call for measured adjustment.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -4,
+      "stance": 0,
+      "balance": -15,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -4,
+        "stance": 0,
+        "balance": -15,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     },
     {
       "date": "2025-06-15",
       "title": "Economic Outlook and Monetary Policy",
       "venue": "Midwest Economic Forecast Forum",
       "text": "The labor market continues to cool gradually, moving toward better balance. Inflation has made substantial progress but remains above the 2 percent target. I believe the current stance of monetary policy is appropriately calibrated given the balance of risks.",
-      "source": "manual_corpus"
+      "source": "manual_corpus",
+      "score": -4,
+      "stance": 0,
+      "balance": -15,
+      "direction": 5,
+      "reason": "Heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -4,
+        "stance": 0,
+        "balance": -15,
+        "direction": 5,
+        "reason": "Heuristic pre-score",
+        "keywords": []
+      }
     }
   ]
 }
