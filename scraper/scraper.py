@@ -1,3 +1,4 @@
+import json
 """
 FOMC Speech Scraper — federalreserve.gov + all 12 regional Fed banks
 Runs daily via GitHub Actions. Fetches new speeches, scores with Claude,
@@ -471,6 +472,29 @@ def run():
     corpus = load_corpus()
     existing_count = sum(len(v) for v in corpus.values())
     log.info(f"Existing corpus: {existing_count} speeches across {len(corpus)} members")
+
+    # Merge manual supplement (speeches scraper can't auto-find)
+    supplement_path = CORPUS_PATH.parent / "corpus_supplement.json"
+    if supplement_path.exists():
+        try:
+            supplement = json.loads(supplement_path.read_text())
+            added = 0
+            for member_id, speeches in supplement.items():
+                existing = corpus.get(member_id, [])
+                existing_keys = {(sp["date"], sp["title"][:30]) for sp in existing}
+                existing_urls = {sp.get("url","") for sp in existing}
+                for sp in speeches:
+                    key = (sp["date"], sp["title"][:30])
+                    if key in existing_keys or (sp.get("url") and sp["url"] in existing_urls):
+                        continue
+                    existing.append(sp)
+                    existing_keys.add(key)
+                    added += 1
+                corpus[member_id] = existing
+            if added:
+                log.info(f"Supplement: merged {added} manual speeches")
+        except Exception as e:
+            log.warning(f"Supplement merge failed: {e}")
 
     # Set lookback to cover from newest speech in corpus to today
     if existing_count > 0:
