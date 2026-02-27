@@ -850,25 +850,35 @@ MEMBERS.forEach(m => { data[m.id] = []; });
 let CORPUS = {};
 
 async function loadCorpus() {
-  // Try to fetch corpus.json from same origin (GitHub Pages)
   const CORPUS_URL = 'corpus.json';
   try {
     const res = await fetch(CORPUS_URL + '?v=' + Date.now());
     if (!res.ok) throw new Error('HTTP ' + res.status);
     const raw = await res.json();
 
-    // corpus.json from scraper uses member_id keys with array of speeches
-    // Map to same format as old CORPUS: { member_id: [{date,title,venue,text,url,...}] }
+    // Build a simple hash of the corpus to detect changes and bust stale localStorage
+    const corpusHash = Object.entries(raw)
+      .map(([k,v]) => k + v.length)
+      .join('|');
+    const storedHash = localStorage.getItem('fomc_corpus_hash');
+    if (storedHash && storedHash !== corpusHash) {
+      console.log('Corpus changed — clearing stale score cache');
+      localStorage.removeItem(CACHE_KEY);
+    }
+    localStorage.setItem('fomc_corpus_hash', corpusHash);
+
     CORPUS = {};
+    const knownIds = new Set(MEMBERS.map(m => m.id));
+
     for (const [memberId, speeches] of Object.entries(raw)) {
+      if (!knownIds.has(memberId)) continue; // skip departed members
       CORPUS[memberId] = speeches.map(sp => ({
         date:  sp.date  || sp.speech_date || '',
         title: sp.title || '',
         venue: sp.venue || sp.source || '',
-        text:  sp.text  || sp.excerpt || sp.full_text || sp.title || '',
+        text:  sp.text  || sp.excerpt || sp.full_text || '',
         url:   sp.url   || '',
-        // If already scored by scraper, attach pre-scored data
-        preScored: (sp.score !== undefined) ? {
+        preScored: (sp.score !== undefined && sp.score !== null) ? {
           score:     sp.score,
           stance:    sp.stance    || 0,
           balance:   sp.balance   || 0,
@@ -880,42 +890,43 @@ async function loadCorpus() {
     }
 
     const count = Object.values(CORPUS).reduce((a,v) => a+v.length, 0);
-    console.log('Corpus loaded from corpus.json:', count, 'speeches');
+    console.log('Corpus loaded:', count, 'speeches');
 
-    // Inject pre-scored speeches into data[] so they don't need re-scoring
-    let preScored = 0;
+    // Inject ALL pre-scored speeches into data[] immediately
+    let injected = 0;
     MEMBERS.forEach(m => {
       (CORPUS[m.id] || []).forEach(sp => {
         if (sp.preScored) {
-          data[m.id].push({
-            date:      sp.date,
-            title:     sp.title,
-            venue:     sp.venue,
-            url:       sp.url,
-            score:     sp.preScored.score,
-            stance:    sp.preScored.stance,
-            balance:   sp.preScored.balance,
-            direction: sp.preScored.direction,
-            reason:    sp.preScored.reason,
-            keywords:  sp.preScored.keywords,
-          });
-          preScored++;
+          // Avoid duplicates from previous inject attempts
+          if (!data[m.id].find(d => d.date === sp.date)) {
+            data[m.id].push({
+              date:      sp.date,
+              title:     sp.title,
+              venue:     sp.venue,
+              url:       sp.url,
+              score:     sp.preScored.score,
+              stance:    sp.preScored.stance,
+              balance:   sp.preScored.balance,
+              direction: sp.preScored.direction,
+              reason:    sp.preScored.reason,
+              keywords:  sp.preScored.keywords,
+            });
+            injected++;
+          }
         }
       });
     });
-    if (preScored > 0) {
-      console.log('Pre-scored speeches loaded:', preScored);
-    }
-
+    console.log('Pre-scored injected into data[]:', injected);
     return count;
 
   } catch(e) {
-    console.warn('corpus.json not found or failed to load:', e.message);
-    console.warn('Running with empty corpus — score speeches manually or add corpus.json');
+    console.warn('corpus.json failed:', e.message);
     CORPUS = {};
     return 0;
   }
 }
+
+
 
 
 // ═══════════════════════════════════════
@@ -978,23 +989,23 @@ function getCacheStats() {
 }
 
 async function scoreAll() {
-  // Only count speeches for known MEMBERS — ignore stale corpus entries
   const knownIds = new Set(MEMBERS.map(m => m.id));
   total = Object.entries(CORPUS).reduce((a,[id,v]) => a + (knownIds.has(id) ? v.length : 0), 0);
   scored = 0;
   const toScore = [];
 
   Object.entries(CORPUS).forEach(([id, speeches]) => {
-    if (!knownIds.has(id)) return; // skip removed members (e.g. kugler)
+    if (!knownIds.has(id)) return;
     speeches.forEach(sp => {
       const entry = {id, ...sp};
 
-      // 1. Already injected into data[] (preScored from corpus.json)
-      //    Match on date alone — titles can drift between corpus versions
-      const alreadyLoaded = (data[id] || []).find(d => d.date === sp.date);
-      if (alreadyLoaded) { scored++; return; }
+      // 1. Already in data[] (injected by loadCorpus from preScored)
+      if ((data[id] || []).find(d => d.date === sp.date)) {
+        scored++;
+        return;
+      }
 
-      // 2. localStorage cache hit
+      // 2. localStorage cache
       const cached = getCachedScore(entry);
       if (cached) {
         data[id].push({ date:sp.date, title:sp.title, venue:sp.venue||'', url:sp.url||'', ...cached });
@@ -1002,17 +1013,17 @@ async function scoreAll() {
         return;
       }
 
-      // 3. No text content → apply heuristic immediately, don't call API
+      // 3. No usable text → heuristic, never call API
       const txt = (sp.text || '').trim();
-      if (!txt || txt === sp.title || txt.length < 80) {
-        const hScore = heuristicScore(entry);
-        data[id].push({ date:sp.date, title:sp.title, venue:sp.venue||'', url:sp.url||'', ...hScore });
-        setCachedScore(entry, hScore);
+      if (!txt || txt.length < 80) {
+        const h = heuristicScore(entry);
+        data[id].push({ date:sp.date, title:sp.title, venue:sp.venue||'', url:sp.url||'', ...h });
+        setCachedScore(entry, h);
         scored++;
         return;
       }
 
-      // 4. Has text, not cached — needs API scoring
+      // 4. Has text, not pre-scored, not cached → API
       toScore.push(entry);
     });
   });
@@ -1026,16 +1037,16 @@ async function scoreAll() {
   }
 
   document.getElementById('loadStatus').textContent =
-    `${scored} from cache · scoring ${toScore.length} new via Claude…`;
+    `${scored} loaded · scoring ${toScore.length} new speeches via Claude…`;
 
   const BATCH = 3;
   for (let i = 0; i < toScore.length; i += BATCH) {
-    const batch = toScore.slice(i, i + BATCH);
-    await Promise.all(batch.map(scoreOne));
+    await Promise.all(toScore.slice(i, i + BATCH).map(scoreOne));
     document.getElementById('loadStatus').textContent =
-      `Scored ${scored} of ${total} · ${toScore.length - i - batch.length} remaining…`;
+      `Scored ${scored} of ${total}…`;
   }
 }
+
 
 // Standalone heuristic scorer (no API needed)
 function heuristicScore(entry) {
