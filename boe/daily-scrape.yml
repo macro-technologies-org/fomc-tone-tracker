@@ -1,12 +1,13 @@
-name: FOMC Scraper
+name: BoE MPC Scraper
 
 on:
   schedule:
-    - cron: '0 14 * * 1-5'   # 14:00 UTC weekdays (after most Fed speeches post)
+    # Run daily at 07:00 UTC (before London market open)
+    - cron: '0 7 * * *'
   workflow_dispatch:
     inputs:
       lookback_days:
-        description: 'Days to look back (default 7, use 365 for backfill)'
+        description: 'Days to look back (default 7, use 730 for full backfill)'
         required: false
         default: '7'
       dry_run:
@@ -15,7 +16,7 @@ on:
         default: 'false'
         type: boolean
       backfill:
-        description: 'Full backfill (365 days)'
+        description: 'Full backfill (Aug 2024 → present)'
         required: false
         default: 'false'
         type: boolean
@@ -41,7 +42,7 @@ jobs:
         run: |
           pip install requests beautifulsoup4 lxml anthropic
 
-      - name: Run scraper
+      - name: Run BoE Scraper
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           LOOKBACK_DAYS: ${{ github.event.inputs.lookback_days || '7' }}
@@ -59,20 +60,15 @@ jobs:
           fi
           python scraper.py $ARGS
 
-      - name: Commit changes
+      - name: Commit corpus updates
         run: |
-          git config user.name "FOMC Scraper Bot"
-          git config user.email "actions@github.com"
+          git config user.name "BoE MPC Scraper"
+          git config user.email "bot@macrotechnologies.io"
           git add corpus.json scraper/corpus.json scraper/failed_speeches.json 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            SUMMARY=$(python3 -c "
-          import json
-          c = json.load(open('corpus.json'))
-          n = sum(len(v) for v in c.values())
-          print(f'{n} speeches / {len(c)} members')
-          ")
-            git commit -m "Auto-update corpus — $SUMMARY [$(date -u +%Y-%m-%d)]"
+            ENTRIES=$(python3 -c "import json; d=json.load(open('corpus.json')); print(sum(len(v) for v in d.values()))" 2>/dev/null || echo "?")
+            git commit -m "BoE corpus: ${ENTRIES} entries [$(date -u +%Y-%m-%d)]"
             git push
           fi
