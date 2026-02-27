@@ -1703,17 +1703,20 @@ function initCompositeChart(series) {
   const dates  = series.map(s => s.date);
   const scores = series.map(s => s.score);
 
-  const sAbs = Math.max(Math.abs(Math.min(...scores)), Math.abs(Math.max(...scores)));
-  const pad  = Math.max(Math.ceil(sAbs * 0.30), 6);
-  const yMin = -(sAbs + pad);
-  const yMax =  (sAbs + pad);
+  // Use ACTUAL min/max — do NOT force symmetric — tight pad each side
+  const sMin   = Math.min(...scores);
+  const sMax   = Math.max(...scores);
+  const sRange = sMax - sMin;
+  const pad    = Math.max(Math.ceil(sRange * 0.20), 2);
+  const yMin   = Math.floor(sMin - pad);
+  const yMax   = Math.ceil(sMax + pad);
 
   const ctx = el.getContext('2d');
 
   const grad = ctx.createLinearGradient(0, 0, 0, 220);
-  grad.addColorStop(0,   'rgba(217,84,43,0.18)');
-  grad.addColorStop(0.5, 'rgba(107,122,148,0.03)');
-  grad.addColorStop(1,   'rgba(43,143,196,0.18)');
+  grad.addColorStop(0,   'rgba(217,84,43,0.22)');
+  grad.addColorStop(0.5, 'rgba(107,122,148,0.04)');
+  grad.addColorStop(1,   'rgba(43,143,196,0.22)');
 
   const annotPlugin = {
     id: 'annot',
@@ -1723,16 +1726,22 @@ function initCompositeChart(series) {
       const yScale = scales.y;
       if (!xScale || !yScale) return;
 
+      // Neutral zero line — only if 0 is within view
       const y0 = yScale.getPixelForValue(0);
       if (y0 >= ca.top && y0 <= ca.bottom) {
         c.save();
-        c.strokeStyle = 'rgba(255,255,255,0.12)';
+        c.strokeStyle = 'rgba(255,255,255,0.15)';
         c.lineWidth = 1;
         c.setLineDash([4, 5]);
         c.beginPath(); c.moveTo(ca.left, y0); c.lineTo(ca.right, y0); c.stroke();
+        c.fillStyle = 'rgba(255,255,255,0.18)';
+        c.font = '8px IBM Plex Mono';
+        c.textAlign = 'right';
+        c.fillText('NEUTRAL', ca.left - 4, y0 + 3);
         c.restore();
       }
 
+      // FOMC meeting vertical lines
       FOMC_MEETINGS.forEach(md => {
         let idx = -1;
         for (let i = 0; i < dates.length; i++) {
@@ -1763,11 +1772,11 @@ function initCompositeChart(series) {
         borderWidth: 2,
         backgroundColor: grad,
         fill: true,
-        tension: 0.3,
-        pointRadius: scores.map((v, i) => i === scores.length - 1 ? 5 : (Math.abs(v) > 12 ? 3 : 1.5)),
+        tension: 0.35,
+        pointRadius: scores.map((v, i) => i === scores.length - 1 ? 5 : 0),
         pointBackgroundColor: scores.map(gc),
         pointBorderColor: 'transparent',
-        pointHoverRadius: 6,
+        pointHoverRadius: 5,
       }]
     },
     options: {
