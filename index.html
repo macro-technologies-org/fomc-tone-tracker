@@ -1665,9 +1665,9 @@ function renderCompositePanel(){
   </div>`;
 }
 
-let compositeChart=null;
+let compositeChart = null;
 
-// Known FOMC meeting dates for annotation lines
+// FOMC meeting dates — for vertical annotation lines
 const FOMC_MEETINGS = [
   '2024-01-31','2024-03-20','2024-05-01','2024-06-12','2024-07-31',
   '2024-09-18','2024-11-07','2024-12-18',
@@ -1676,223 +1676,198 @@ const FOMC_MEETINGS = [
   '2026-01-29','2026-03-19','2026-05-07',
 ];
 
-// Fed Funds Rate (upper bound) by effective date
-// Source: Federal Reserve historical data
-const FED_FUNDS_RATE = [
-  {date:'2023-07-27', rate:5.50},
-  {date:'2024-09-19', rate:5.00},
-  {date:'2024-11-08', rate:4.75},
-  {date:'2024-12-19', rate:4.50},
-  {date:'2025-01-29', rate:4.50},
-  {date:'2025-03-20', rate:4.50},
-  {date:'2025-05-08', rate:4.50},
-  {date:'2025-06-19', rate:4.50},
-  {date:'2025-07-31', rate:4.50},
-  {date:'2025-09-18', rate:4.25},
-  {date:'2025-10-30', rate:4.25},
-  {date:'2025-12-11', rate:4.25},
-  {date:'2026-01-30', rate:4.25},
+// Fed Funds Rate upper bound — effective dates (FOMC decision + 1 day)
+const FFR_HISTORY = [
+  ['2022-03-17', 0.50], ['2022-05-05', 1.00], ['2022-06-16', 1.75],
+  ['2022-07-28', 2.50], ['2022-09-22', 3.25], ['2022-11-03', 4.00],
+  ['2022-12-15', 4.50], ['2023-02-02', 4.75], ['2023-03-23', 5.00],
+  ['2023-05-04', 5.25], ['2023-07-27', 5.50],
+  ['2024-09-19', 5.00], ['2024-11-08', 4.75], ['2024-12-19', 4.50],
+  ['2026-01-30', 4.25],
 ];
 
-function rateAtDate(d) {
-  // Walk the sorted table: return the rate for the most recent change on or before d
-  let rate = 5.50; // pre-series default (peak 2023-mid 2024)
-  for (const r of FED_FUNDS_RATE) {
-    if (d >= r.date) rate = r.rate;
+function rateAtDate(dateStr) {
+  let r = 0;
+  for (const [d, rate] of FFR_HISTORY) {
+    if (dateStr >= d) r = rate;
   }
-  return rate;
+  return r;
 }
 
-function initCompositeChart(series){
-  const el=document.getElementById('compositeChart');
-  if(!el) return;
-  if(compositeChart){ compositeChart.destroy(); compositeChart=null; }
+function initCompositeChart(series) {
+  const el = document.getElementById('compositeChart');
+  if (!el) return;
+  if (compositeChart) { compositeChart.destroy(); compositeChart = null; }
 
-  const scores = series.map(s=>s.score);
-  const labels = series.map(s=>s.date);
+  const dates  = series.map(s => s.date);
+  const scores = series.map(s => s.score);
+  const ffr    = dates.map(d => rateAtDate(d));
 
-  // ── Auto-scale: pad 20% above/below actual data range ──
-  const minS = Math.min(...scores);
-  const maxS = Math.max(...scores);
-  const range = Math.max(maxS - minS, 8); // at least 8pt range
-  const pad   = Math.ceil(range * 0.30);
-  const yMin  = Math.floor(minS - pad);
-  const yMax  = Math.ceil(maxS + pad);
+  // Auto-scale left y-axis to actual score range
+  const sMin = Math.min(...scores), sMax = Math.max(...scores);
+  const sPad = Math.max(Math.ceil((sMax - sMin) * 0.35), 5);
+  const yMin = sMin - sPad, yMax = sMax + sPad;
 
-  // ── Gradient: anchor to actual data range ──
-  const ctx = el.getContext('2d');
-  const h   = el.offsetHeight || 200;
-  const grad = ctx.createLinearGradient(0, 0, 0, h);
-  if(maxS > 0) grad.addColorStop(0, 'rgba(217,84,43,.22)');
-  grad.addColorStop(0.5, 'rgba(107,122,148,.04)');
-  if(minS < 0) grad.addColorStop(1, 'rgba(43,143,196,.22)');
+  // Gradient fill under tone line
+  const ctx  = el.getContext('2d');
+  const grad = ctx.createLinearGradient(0, 0, 0, el.clientHeight || 220);
+  grad.addColorStop(0,   'rgba(217,84,43,0.25)');
+  grad.addColorStop(0.45,'rgba(107,122,148,0.05)');
+  grad.addColorStop(1,   'rgba(43,143,196,0.25)');
 
-  const ptColors = scores.map(gc);
+  // FOMC vertical line + neutral line plugin
+  const annotPlugin = {
+    id: 'annot',
+    afterDraw(chart) {
+      const {ctx: c, chartArea: ca, scales} = chart;
+      const xScale = scales.x;
+      const yScale = scales.y;
+      if (!xScale || !yScale) return;
 
-  // ── FOMC meeting vertical annotations ──
-  const meetingPlugin = {
-    id:'fomcLines',
-    afterDraw(chart){
-      const {ctx, scales:{x, y}} = chart;
-      const neutralY = y.getPixelForValue(0);
-      // Neutral line (bold)
-      ctx.save();
-      ctx.strokeStyle = 'rgba(255,255,255,.08)';
-      ctx.lineWidth = 1;
-      ctx.setLineDash([3,4]);
-      ctx.beginPath();
-      ctx.moveTo(chart.chartArea.left, neutralY);
-      ctx.lineTo(chart.chartArea.right, neutralY);
-      ctx.stroke();
-      ctx.restore();
+      // Neutral zero line
+      const y0 = yScale.getPixelForValue(0);
+      c.save();
+      c.strokeStyle = 'rgba(255,255,255,0.07)';
+      c.lineWidth = 1;
+      c.setLineDash([4, 4]);
+      c.beginPath(); c.moveTo(ca.left, y0); c.lineTo(ca.right, y0); c.stroke();
+      c.restore();
 
       // FOMC meeting lines
-      FOMC_MEETINGS.forEach(meetDate => {
-        const idx = labels.findIndex(d => d >= meetDate);
-        if(idx < 0) return;
-        const xPx = x.getPixelForValue(idx);
-        if(xPx < chart.chartArea.left || xPx > chart.chartArea.right) return;
-        ctx.save();
-        ctx.strokeStyle = 'rgba(232,184,75,.20)';
-        ctx.lineWidth = 1;
-        ctx.setLineDash([2,3]);
-        ctx.beginPath();
-        ctx.moveTo(xPx, chart.chartArea.top);
-        ctx.lineTo(xPx, chart.chartArea.bottom);
-        ctx.stroke();
-        // Small label at bottom
-        ctx.fillStyle = 'rgba(232,184,75,.35)';
-        ctx.font = '8px IBM Plex Mono';
-        ctx.textAlign = 'center';
-        ctx.fillText('FOMC', xPx, chart.chartArea.bottom + 10);
-        ctx.restore();
+      FOMC_MEETINGS.forEach(md => {
+        // Find nearest label index
+        let idx = -1;
+        for (let i = 0; i < dates.length; i++) {
+          if (dates[i] >= md) { idx = i; break; }
+        }
+        if (idx < 0) return;
+        const xpx = xScale.getPixelForValue(idx);
+        if (xpx < ca.left || xpx > ca.right) return;
+        c.save();
+        c.strokeStyle = 'rgba(232,184,75,0.18)';
+        c.lineWidth = 1;
+        c.setLineDash([2, 4]);
+        c.beginPath(); c.moveTo(xpx, ca.top); c.lineTo(xpx, ca.bottom); c.stroke();
+        c.fillStyle = 'rgba(232,184,75,0.30)';
+        c.font = '7px IBM Plex Mono';
+        c.textAlign = 'center';
+        c.fillText('▲', xpx, ca.bottom + 9);
+        c.restore();
       });
     }
   };
 
-  // ── Fed Funds Rate series aligned to speech dates ──
-  const ffrData = labels.map(d => rateAtDate(d));
-
   compositeChart = new Chart(ctx, {
     type: 'line',
-    plugins: [meetingPlugin],
+    plugins: [annotPlugin],
     data: {
-      labels,
-      datasets:[
-        // Dataset 0: FOMC Composite Tone (left y-axis)
+      labels: dates,
+      datasets: [
         {
-          label: 'FOMC Composite Tone',
+          // Dataset 0 — FOMC Composite Tone (LEFT axis)
+          label: 'FOMC Tone',
+          yAxisID: 'yTone',
           data: scores,
-          yAxisID: 'y',
           borderColor: '#e8b84b',
           borderWidth: 2,
           backgroundColor: grad,
           fill: true,
-          pointBackgroundColor: ptColors,
-          pointBorderColor: ptColors,
-          pointRadius: scores.map((sc,i) => i===scores.length-1 ? 6 : (Math.abs(sc)>20?4:2.5)),
-          pointHoverRadius: 7,
           tension: 0.35,
+          pointRadius: scores.map((v, i) => i === scores.length - 1 ? 5 : (Math.abs(v) > 15 ? 3 : 1.5)),
+          pointBackgroundColor: scores.map(gc),
+          pointBorderColor: 'transparent',
+          pointHoverRadius: 6,
           order: 2,
         },
-        // Dataset 1: Fed Funds Rate (right y-axis)
         {
+          // Dataset 1 — Fed Funds Rate (RIGHT axis)
           label: 'Fed Funds Rate',
-          data: ffrData,
-          yAxisID: 'y2',
-          borderColor: 'rgba(61,170,110,.75)',
-          borderWidth: 2,
+          yAxisID: 'yFFR',
+          data: ffr,
+          borderColor: 'rgba(61,200,120,0.85)',
+          borderWidth: 2.5,
           backgroundColor: 'transparent',
           fill: false,
+          tension: 0,
+          stepped: true,
           pointRadius: 0,
-          pointHoverRadius: 5,
+          pointHoverRadius: 4,
           pointHoverBackgroundColor: '#3daa6e',
-          tension: 0,   // step-like — rates change discretely
-          stepped: 'before',
           order: 1,
         }
       ]
     },
-    options:{
+    options: {
       responsive: true,
       maintainAspectRatio: false,
-      animation: {duration: 500},
-      interaction: {mode:'index', intersect:false},
-      plugins:{
-        legend: {display:false},
-        tooltip:{
-          backgroundColor:'#0f1319',
-          borderColor:'#2a3448',
-          borderWidth:1,
-          titleColor:'#e8b84b',
-          bodyColor:'#cdd5e0',
+      animation: { duration: 600 },
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: '#0d1117',
+          borderColor: '#2a3448',
+          borderWidth: 1,
+          titleColor: '#e8b84b',
+          bodyColor: '#cdd5e0',
           padding: 10,
-          titleFont:{family:'IBM Plex Mono',size:10},
-          bodyFont:{family:'IBM Plex Mono',size:10},
-          callbacks:{
+          titleFont: { family: 'IBM Plex Mono', size: 10 },
+          bodyFont: { family: 'IBM Plex Mono', size: 10 },
+          callbacks: {
             title: items => {
-              const d = new Date(items[0].label+'T12:00:00');
-              return d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+              const d = new Date(items[0].label + 'T12:00:00');
+              return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
             },
             label: item => {
-              if(item.datasetIndex === 0) {
-                const sc = item.raw;
-                return ` Tone: ${sc>0?'+':''}${sc}  ${gl(sc)}`;
-              } else {
-                return ` FFR: ${item.raw.toFixed(2)}%`;
+              if (item.datasetIndex === 0) {
+                const v = item.raw;
+                return `  Tone  ${v > 0 ? '+' : ''}${v}  ${gl(v)}`;
               }
-            },
-            afterLabel: item => {
-              if(item.datasetIndex !== 0) return '';
-              const d = item.label;
-              const near = FOMC_MEETINGS.find(m => Math.abs(new Date(m)-new Date(d)) < 14*86400000);
-              return near ? ` ↳ near FOMC ${new Date(near+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric'})}` : '';
+              return `  FFR   ${item.raw.toFixed(2)}%`;
             }
           }
         }
       },
-      scales:{
-        x:{
-          grid:{color:'rgba(255,255,255,.02)'},
-          ticks:{
-            color:'#3d4a5e',
-            font:{family:'IBM Plex Mono',size:8},
+      scales: {
+        x: {
+          grid: { color: 'rgba(255,255,255,0.02)' },
+          ticks: {
+            color: '#3d4a5e',
+            font: { family: 'IBM Plex Mono', size: 8 },
             maxTicksLimit: 14,
             maxRotation: 0,
           }
         },
-        // Left y-axis: Tone score
-        y:{
+        yTone: {
           position: 'left',
           min: yMin,
           max: yMax,
-          grid:{color:'rgba(255,255,255,.025)'},
-          ticks:{
-            color:'#5a6880',
-            font:{family:'IBM Plex Mono',size:9},
+          grid: { color: 'rgba(255,255,255,0.025)' },
+          ticks: {
+            color: '#7a8a9e',
+            font: { family: 'IBM Plex Mono', size: 9 },
             maxTicksLimit: 7,
-            callback: v => v===0 ? '0 NEUTRAL' : v>0 ? `+${v}` : `${v}`
+            callback: v => v === 0 ? 'NEUTRAL' : (v > 0 ? `+${v}` : `${v}`)
           }
         },
-        // Right y-axis: Fed Funds Rate
-        y2:{
+        yFFR: {
           position: 'right',
           min: 3.75,
-          max: 5.75,
-          grid:{drawOnChartArea: false},
-          ticks:{
-            color:'rgba(61,170,110,.75)',
-            font:{family:'IBM Plex Mono',size:9},
-            maxTicksLimit: 5,
+          max: 6.00,
+          grid: { drawOnChartArea: false },
+          ticks: {
+            color: 'rgba(61,200,120,0.75)',
+            font: { family: 'IBM Plex Mono', size: 9 },
+            maxTicksLimit: 6,
             callback: v => v.toFixed(2) + '%'
           },
-          title:{
+          title: {
             display: true,
             text: 'FFR',
-            color: 'rgba(61,170,110,.5)',
-            font: {family:'IBM Plex Mono', size:8},
+            color: 'rgba(61,200,120,0.45)',
+            font: { family: 'IBM Plex Mono', size: 8 }
           },
-          border:{color:'rgba(61,170,110,.25)'}
+          border: { color: 'rgba(61,200,120,0.2)' }
         }
       }
     }
