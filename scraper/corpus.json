@@ -167,6 +167,72 @@
         "reason": "Heuristic pre-score",
         "keywords": []
       }
+    },
+    {
+      "date": "2025-10-14",
+      "title": "At the National Association for Business Economics Annual Meeting",
+      "venue": "National Association for Business Economics Annual Meeting, Nashville, Tennessee",
+      "url": "https://www.federalreserve.gov/newsevents/speech/powell20251014a.htm",
+      "text": "Chair Powell spoke at the NABE Annual Meeting in Nashville. He discussed the economic outlook, noting that the economy has made significant progress toward the Fed's dual mandate goals. Inflation has come down substantially from its peak while the labor market has remained resilient. Powell emphasized the Fed is well positioned to respond to risks on either side of the dual mandate. He described policy as 'moderately restrictive' and signaled patience, noting the Fed is not in a hurry to adjust rates and will make decisions meeting by meeting based on incoming data. He acknowledged uncertainty from trade policy and fiscal policy but said the underlying economy remains solid. Powell reiterated the Fed's commitment to returning inflation to 2% while sustaining a healthy labor market.",
+      "source": "manual_supplement",
+      "score": 3,
+      "stance": -18,
+      "balance": 0,
+      "direction": 25,
+      "reason": "Manual supplement \u2014 heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 3,
+        "stance": -18,
+        "balance": 0,
+        "direction": 25,
+        "reason": "Manual supplement \u2014 heuristic pre-score",
+        "keywords": []
+      }
+    },
+    {
+      "date": "2025-11-13",
+      "title": "Economic Outlook \u2014 Dallas Fed",
+      "venue": "Federal Reserve Bank of Dallas, Dallas, Texas",
+      "url": "https://www.federalreserve.gov/newsevents/speech/powell20251113a.htm",
+      "text": "Powell spoke at the Dallas Fed on the economic outlook. He characterized inflation as still somewhat elevated but making further progress toward 2%. The labor market has cooled from its overheated state but remains solid. Powell described the current level of interest rates as 'moderately restrictive' and well-positioned. He said the Fed can afford to be patient and careful as it considers further adjustments, emphasizing data dependence. He noted risks are two-sided \u2014 inflation could re-accelerate or the labor market could weaken more than expected. The tone was balanced, signaling no urgency to cut rates further while leaving the door open to future adjustments.",
+      "source": "manual_supplement",
+      "score": 3,
+      "stance": -18,
+      "balance": 0,
+      "direction": 25,
+      "reason": "Manual supplement \u2014 heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 3,
+        "stance": -18,
+        "balance": 0,
+        "direction": 25,
+        "reason": "Manual supplement \u2014 heuristic pre-score",
+        "keywords": []
+      }
+    },
+    {
+      "date": "2026-01-29",
+      "title": "Post-FOMC Press Conference \u2014 January 2026",
+      "venue": "Federal Reserve, Washington D.C.",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20260129.htm",
+      "text": "Powell held the post-FOMC press conference following the January 2026 decision to hold rates steady at 4.25-4.50%. He emphasized the committee is in no hurry to make further adjustments and wants to see more progress on inflation before cutting. Powell noted inflation remains somewhat elevated above the 2% target and the labor market is solid. He described policy as 'meaningfully restrictive' and said the Fed does not need to be in a hurry. When asked about potential tariff impacts, he acknowledged tariffs could put upward pressure on inflation and said the Fed would watch carefully. The overall tone was firmly on hold \u2014 patience and data dependence were the dominant themes.",
+      "source": "manual_supplement",
+      "score": 9,
+      "stance": 0,
+      "balance": 0,
+      "direction": 25,
+      "reason": "Manual supplement \u2014 heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 9,
+        "stance": 0,
+        "balance": 0,
+        "direction": 25,
+        "reason": "Manual supplement \u2014 heuristic pre-score",
+        "keywords": []
+      }
     }
   ],
   "jefferson": [
@@ -337,6 +403,28 @@
         "reason": "Heuristic pre-score",
         "keywords": []
       }
+    },
+    {
+      "date": "2026-02-06",
+      "title": "Economic Outlook \u2014 Drexel University",
+      "venue": "Drexel University, Philadelphia, Pennsylvania",
+      "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20260206a.htm",
+      "text": "Vice Chair Jefferson spoke at Drexel University on the economic outlook. He noted the economy remains on solid footing with GDP growth above trend and the labor market in good balance. On inflation, Jefferson acknowledged it remains somewhat above 2% but has made substantial progress. He described the current policy stance as 'well positioned' and said the Fed is in a good place to be patient and assess incoming data. Jefferson expressed particular attention to labor market risks, noting that any significant weakening would warrant a policy response. He signaled that with policy restrictive and the economy solid, there is no urgency to adjust rates in either direction.",
+      "source": "manual_supplement",
+      "score": 5,
+      "stance": 0,
+      "balance": -12,
+      "direction": 25,
+      "reason": "Manual supplement \u2014 heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": 5,
+        "stance": 0,
+        "balance": -12,
+        "direction": 25,
+        "reason": "Manual supplement \u2014 heuristic pre-score",
+        "keywords": []
+      }
     }
   ],
   "waller": [
@@ -505,6 +593,28 @@
         "balance": -30,
         "direction": -3,
         "reason": "Heuristic pre-score",
+        "keywords": []
+      }
+    },
+    {
+      "date": "2025-10-14",
+      "title": "Economic Outlook \u2014 St. Louis",
+      "venue": "Economic Club of St. Louis, Missouri",
+      "url": "https://www.federalreserve.gov/newsevents/speech/waller20251014a.htm",
+      "text": "Waller gave an economic outlook speech at the Economic Club of St. Louis. He characterized inflation as still too high but declining, and expressed confidence that inflation will continue to fall toward 2%. He described the labor market as cooling but not deteriorating. Waller argued the current policy stance is appropriately restrictive and that further cuts are warranted as inflation continues to fall. He signaled that if inflation data remains cooperative, he would support continued gradual rate reductions. His tone was moderately dovish \u2014 more optimistic on inflation progress than peers and more willing to keep cutting.",
+      "source": "manual_supplement",
+      "score": -11,
+      "stance": 0,
+      "balance": -12,
+      "direction": -20,
+      "reason": "Manual supplement \u2014 heuristic pre-score",
+      "keywords": [],
+      "preScored": {
+        "score": -11,
+        "stance": 0,
+        "balance": -12,
+        "direction": -20,
+        "reason": "Manual supplement \u2014 heuristic pre-score",
         "keywords": []
       }
     }
@@ -2904,36 +3014,6 @@
         "reason": "Heuristic pre-score",
         "keywords": []
       }
-    },
-    {
-      "date": "2026-02-19",
-      "title": "Q&A with Neel Kashkari at the Midwest Economic Outlook Summit",
-      "venue": "",
-      "url": "https://www.minneapolisfed.org/speeches/2026/neel-kashkari-at-the-midwest-economic-outlook-summit",
-      "url_hash": "3e0d1df00eec",
-      "source": "minneapolis",
-      "text": "Q&A with Neel Kashkari at the Midwest Economic Outlook Summit February 19, 2026 | 8:05\u20138:55 a.m. CT Fargo , North Dakota Neel Kashkari President and CEO Q&A with Neel Kashkari at the Midwest Economic Outlook Summit Share Facebook LinkedIn Twitter Your browser does not support the audio element. Full Event ( video ) Neel Kashkari, president of the Federal Reserve Bank of Minneapolis, participates in a conversation with Jim Ryan, chairman and CEO of Old National Bank, at the 2026 Midwest Economic Outlook Summit in Fargo, North Dakota. The summit is hosted by the Fargo Moorhead West Fargo Chamber of Commerce. Sign up for news and events Sign up for emails to get the latest news, research, and information from the Federal Reserve Bank of Minneapolis",
-      "score": 0,
-      "stance": 0,
-      "balance": 0,
-      "direction": 0,
-      "reason": "No substantive policy content available in the provided text - only event metadata and promotional information without any actual speech content or Q&A responses from Kashkari to evaluate against the 137.5bps restrictive stance framework.",
-      "keywords": [
-        {
-          "word": "No policy content",
-          "type": "neutral"
-        },
-        {
-          "word": "Event announcement only",
-          "type": "neutral"
-        },
-        {
-          "word": "No rate path signal",
-          "type": "neutral"
-        }
-      ],
-      "model": "claude-sonnet-4-5",
-      "scraped_at": "2026-02-27T08:52:58.710553"
     }
   ],
   "collins": [
@@ -3104,36 +3184,6 @@
         "reason": "Heuristic pre-score",
         "keywords": []
       }
-    },
-    {
-      "date": "2026-02-24",
-      "title": "Welcoming Remarks at the \u201c2026 Technology-Enabled Disruption Conference: Shaping the Future of Finance and Payments\u201d",
-      "venue": "",
-      "url": "https://www.bostonfed.org/news-and-events/speeches/2026/remarks-at-2026-tech-enabled-disruption-conference.aspx",
-      "url_hash": "49b38ba121c3",
-      "source": "boston",
-      "text": "Welcoming Remarks at the \u201c2026 Technology-Enabled Disruption Conference: Shaping the Future of Finance and Payments\u201d View full size Peter Davis/Federal Reserve Bank of Boston By Susan M. Collins February 24, 2026 Boston, Massachusetts 2026 Technology-Enabled Disruption Conference: Shaping the Future of Finance and Payments Full-text Speech (pdf) share share share share Federal Reserve Bank of Boston President & CEO Susan M. Collins delivered welcoming remarks at the \u201c 2026 Technology-Enabled Disruption Conference: Shaping the Future of Finance and Payments .\u201d She discussed how rapid technological advancements are shaping economic activity in meaningful ways and influencing economic outcomes, citing broad advances in artificial intelligence, digital platforms, and payments technologies. Col",
-      "score": 0,
-      "stance": 0,
-      "balance": 0,
-      "direction": 0,
-      "reason": "Speech contains no monetary policy content, focusing exclusively on welcoming remarks for a technology conference with no discussion of restrictiveness, the neutral rate framework, or rate path guidance.",
-      "keywords": [
-        {
-          "word": "technological advancements",
-          "type": "neutral"
-        },
-        {
-          "word": "economic activity",
-          "type": "neutral"
-        },
-        {
-          "word": "artificial intelligence",
-          "type": "neutral"
-        }
-      ],
-      "model": "claude-sonnet-4-5",
-      "scraped_at": "2026-02-27T08:29:16.142230"
     }
   ],
   "kugler": [
