@@ -1708,17 +1708,26 @@ function initCompositeChart(series) {
   const scores = series.map(s => s.score);
   const ffr    = dates.map(d => rateAtDate(d));
 
-  // ── Left axis: tight auto-scale around actual tone scores ──
+  // ── Normalized dual-axis scaling ──
+  // Both lines get the same fraction of vertical chart space so they
+  // visually track each other rather than one line being squashed.
   const sMin = Math.min(...scores), sMax = Math.max(...scores);
-  const sPad = Math.max(Math.ceil((sMax - sMin) * 0.20), 4); // tight 20% pad, min 4pts
-  const yToneMin = Math.floor(sMin - sPad);
-  const yToneMax = Math.ceil(sMax + sPad);
+  const fMin = Math.min(...ffr),    fMax = Math.max(...ffr);
 
-  // ── Right axis: tight auto-scale around actual FFR values ──
-  const fMin = Math.min(...ffr), fMax = Math.max(...ffr);
-  const fPad = 0.20; // 20bp padding each side
-  const yFFRMin = Math.floor((fMin - fPad) * 4) / 4;  // round to nearest 0.25
-  const yFFRMax = Math.ceil( (fMax + fPad) * 4) / 4;
+  // Tone axis: symmetric around 0 (neutral), padded 25%
+  const toneHalf     = Math.max(Math.abs(sMin), Math.abs(sMax));
+  const tonePad      = Math.max(toneHalf * 0.25, 5);
+  const yToneMin     = -(toneHalf + tonePad);
+  const yToneMax     =  (toneHalf + tonePad);
+
+  // FFR axis: scaled so FFR data uses the same % of axis height as tone data
+  const toneSpan     = yToneMax - yToneMin;                // total tone axis range
+  const toneDataFrac = (sMax - sMin) / toneSpan;           // fraction used by data
+  const fRange       = Math.max(fMax - fMin, 0.25);        // at least 25bp range
+  const fCenter      = (fMax + fMin) / 2;
+  const fHalf        = (fRange / 2) / toneDataFrac;        // match same fraction
+  const yFFRMin      = fCenter - fHalf;
+  const yFFRMax      = fCenter + fHalf;
 
   const ctx = el.getContext('2d');
 
