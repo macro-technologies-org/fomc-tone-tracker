@@ -328,7 +328,7 @@ REGIONAL_SOURCES = [
                      "https://www.dallasfed.org",
                      "div[class*='item'], li[class*='item'], article",
                      "time, span[class*='date']"),
-    ("sanfrancisco", "https://www.frbsf.org/economic-research/speeches/",
+    ("sanfrancisco", "https://www.frbsf.org/news-and-media/speeches/",
                      "https://www.frbsf.org",
                      "li[class*='item'], div[class*='post'], article",
                      "time, span[class*='date']"),
