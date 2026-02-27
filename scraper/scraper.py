@@ -1,4 +1,3 @@
-import json
 """
 FOMC Speech Scraper — federalreserve.gov + all 12 regional Fed banks
 Runs daily via GitHub Actions. Fetches new speeches, scores with Claude,
@@ -6,6 +5,7 @@ appends to corpus.json which feeds the FOMC Tone Tracker.
 """
 
 import os, re, json, time, logging, hashlib, sys
+from pathlib import Path
 from datetime import datetime, timezone, date, timedelta
 from typing import Optional
 import requests
