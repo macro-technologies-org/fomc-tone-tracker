@@ -978,65 +978,80 @@ function getCacheStats() {
 }
 
 async function scoreAll() {
-  // Recalculate total from current CORPUS (loaded dynamically)
   total = Object.values(CORPUS).reduce((a,v) => a+v.length, 0);
   scored = 0;
-
-  const entries = [];
-  const cacheHits = [];
+  const toScore = [];
 
   Object.entries(CORPUS).forEach(([id, speeches]) => {
     speeches.forEach(sp => {
       const entry = {id, ...sp};
 
-      // 1. Already in data[] from preScored injection (corpus.json has scores)
-      const alreadyLoaded = (data[id] || []).find(
-        d => d.date === sp.date && d.title === sp.title
-      );
+      // 1. Already injected into data[] (preScored from corpus.json)
+      //    Match on date alone — titles can drift between corpus versions
+      const alreadyLoaded = (data[id] || []).find(d => d.date === sp.date);
       if (alreadyLoaded) { scored++; return; }
 
-      // 2. Check localStorage cache
+      // 2. localStorage cache hit
       const cached = getCachedScore(entry);
       if (cached) {
-        data[id].push({
-          date: sp.date, title: sp.title, venue: sp.venue || '',
-          url: sp.url || '', ...cached
-        });
+        data[id].push({ date:sp.date, title:sp.title, venue:sp.venue||'', url:sp.url||'', ...cached });
         scored++;
-        cacheHits.push(entry);
         return;
       }
 
-      // 3. Needs API scoring
-      entries.push(entry);
+      // 3. No text content → apply heuristic immediately, don't call API
+      const txt = (sp.text || '').trim();
+      if (!txt || txt === sp.title || txt.length < 80) {
+        const hScore = heuristicScore(entry);
+        data[id].push({ date:sp.date, title:sp.title, venue:sp.venue||'', url:sp.url||'', ...hScore });
+        setCachedScore(entry, hScore);
+        scored++;
+        return;
+      }
+
+      // 4. Has text, not cached — needs API scoring
+      toScore.push(entry);
     });
   });
 
-  const stats = getCacheStats();
-  if (cacheHits.length > 0 || scored > 0) {
-    document.getElementById('loadStatus').textContent =
-      `Cache: ${scored} loaded · ${entries.length} need scoring…`;
-  }
-
-  // Update progress bar for pre-loaded speeches
   document.getElementById('progFill').style.width = (scored / total * 100) + '%';
 
-  if (entries.length === 0) {
-    // Everything already scored — skip API entirely
-    document.getElementById('loadStatus').textContent =
-      `All ${total} speeches loaded from cache ✓`;
+  if (toScore.length === 0) {
+    document.getElementById('loadStatus').textContent = `All ${total} speeches loaded ✓`;
     document.getElementById('progFill').style.width = '100%';
     return;
   }
 
-  // Score only what's missing
   document.getElementById('loadStatus').textContent =
-    `Scoring ${entries.length} new speeches via Claude…`;
+    `${scored} from cache · scoring ${toScore.length} new via Claude…`;
 
-  const BATCH = 5;
-  for (let i = 0; i < entries.length; i += BATCH) {
-    await Promise.all(entries.slice(i, i + BATCH).map(scoreOne));
+  const BATCH = 3;
+  for (let i = 0; i < toScore.length; i += BATCH) {
+    const batch = toScore.slice(i, i + BATCH);
+    await Promise.all(batch.map(scoreOne));
+    document.getElementById('loadStatus').textContent =
+      `Scored ${scored} of ${total} · ${toScore.length - i - batch.length} remaining…`;
   }
+}
+
+// Standalone heuristic scorer (no API needed)
+function heuristicScore(entry) {
+  const t = (entry.text || entry.title || '').toLowerCase();
+  let s = 0;
+  if (t.includes('significantly restrictive') || t.includes('substantially restrictive')) s = -60;
+  else if (t.includes('moderately restrictive')) s = -30;
+  else if (t.includes('modestly restrictive')) s = -15;
+  else if (t.includes('near neutral') || t.includes('neutral rate')) s = 10;
+  else if (t.includes('not restrictive') || t.includes('insufficiently restrictive')) s = 50;
+  const hW = ['inflation too high','above target','price stability','upside risk'].filter(w=>t.includes(w)).length;
+  const lW = ['labor market','employment','jobs','cooling','weakening','fragile'].filter(w=>t.includes(w)).length;
+  const b = Math.max(-60, Math.min(60, (hW - lW) * 15));
+  let dir = 0;
+  if (t.includes('no hurry') || t.includes('patient') || t.includes('hold') || t.includes('wait')) dir = 25;
+  else if (t.includes('cut') || t.includes('ease') || t.includes('lower rates')) dir = -25;
+  const score = Math.round(0.30 * s + 0.35 * b + 0.35 * dir);
+  return { score, stance:s, balance:b, direction:dir,
+           reason: 'Heuristic estimate (no speech text available).', keywords: [] };
 }
 
 async function scoreOne(entry) {
@@ -1096,11 +1111,15 @@ ${entry.text}`;
       };
       const apiKey = window.ANTHROPIC_API_KEY || '';
       if (apiKey) headers['x-api-key'] = apiKey;
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 20000); // 20s per speech
       const res = await fetch("https://api.anthropic.com/v1/messages", {
         method: 'POST',
         headers,
+        signal: controller.signal,
         body: JSON.stringify({model:'claude-haiku-4-5-20251001', max_tokens:380, messages:[{role:'user',content:prompt}]})
       });
+      clearTimeout(timeout);
       if (!res.ok) {
         const errBody = await res.json().catch(()=>({}));
         throw new Error(`HTTP ${res.status}: ${errBody?.error?.message || res.statusText}`);
@@ -1120,20 +1139,7 @@ ${entry.text}`;
     }
   }
   if (!apiOk) {
-    const t = entry.text.toLowerCase();
-    let s=0,b=0,dir=0;
-    if (t.includes('significantly restrictive')||t.includes('substantially restrictive')) s=-60;
-    else if (t.includes('moderately restrictive')) s=-30;
-    else if (t.includes('modestly restrictive')) s=-15;
-    else if (t.includes('not restrictive')||t.includes('near neutral')) s=+20;
-    else if (t.includes('insufficiently restrictive')) s=+55;
-    const hW=['inflation too high','above target','price stability','inflation risk'].filter(w=>t.includes(w)).length;
-    const lW=['labor market','employment','jobs','fragile','cooling','weakening'].filter(w=>t.includes(w)).length;
-    b=Math.max(-70,Math.min(70,(hW-lW)*18));
-    if (t.includes('hold')||t.includes('unchanged')||t.includes('patience')) dir=30;
-    else if (t.includes('cut')||t.includes('ease')||t.includes('lower rates')) dir=-30;
-    s=Math.max(-80,Math.min(80,s)); b=Math.max(-80,Math.min(80,b)); dir=Math.max(-80,Math.min(80,dir));
-    const hScore = {score:Math.round(.3*s+.35*b+.35*dir),stance:s,balance:b,direction:dir,reason:'Heuristic estimate (API unavailable).',keywords:[]};
+    const hScore = heuristicScore(entry);
     data[entry.id].push({date:entry.date,title:entry.title,venue:entry.venue,url:entry.url||'',...hScore});
     setCachedScore(entry, hScore);
   }
