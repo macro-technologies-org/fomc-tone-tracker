@@ -926,15 +926,121 @@ async function loadCorpus() {
 // ═══════════════════════════════════════
 // SCORING ENGINE (3-component)
 // ═══════════════════════════════════════
+
+// ═══════════════════════════════════════
+// SCORE CACHE — localStorage persistence
+// Key: "fomc_scores_v1" → { "memberId|date|title_hash": {score,stance,balance,direction,reason,keywords} }
+// ═══════════════════════════════════════
+const CACHE_KEY = 'fomc_scores_v2';
+
+function cacheKey(entry) {
+  // Unique key per speech: member + date + first 40 chars of title
+  const titleSlug = (entry.title || '').slice(0, 40).replace(/\s+/g, '_');
+  return `${entry.id}|${entry.date}|${titleSlug}`;
+}
+
+function loadCache() {
+  try {
+    const raw = localStorage.getItem(CACHE_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch(e) {
+    return {};
+  }
+}
+
+function saveCache(cache) {
+  try {
+    localStorage.setItem(CACHE_KEY, JSON.stringify(cache));
+  } catch(e) {
+    // localStorage full — clear old entries and retry
+    try {
+      localStorage.removeItem(CACHE_KEY);
+      localStorage.setItem(CACHE_KEY, JSON.stringify(cache));
+    } catch(e2) { /* silent fail */ }
+  }
+}
+
+function getCachedScore(entry) {
+  const cache = loadCache();
+  return cache[cacheKey(entry)] || null;
+}
+
+function setCachedScore(entry, scoreData) {
+  const cache = loadCache();
+  cache[cacheKey(entry)] = scoreData;
+  saveCache(cache);
+}
+
+function clearScoreCache() {
+  localStorage.removeItem(CACHE_KEY);
+  console.log('Score cache cleared');
+}
+
+function getCacheStats() {
+  const cache = loadCache();
+  const keys = Object.keys(cache);
+  return { count: keys.length, sizeKB: Math.round(JSON.stringify(cache).length / 1024) };
+}
+
 async function scoreAll() {
   // Recalculate total from current CORPUS (loaded dynamically)
   total = Object.values(CORPUS).reduce((a,v) => a+v.length, 0);
   scored = 0;
+
   const entries = [];
-  Object.entries(CORPUS).forEach(([id,speeches]) => speeches.forEach(sp => entries.push({id,...sp})));
+  const cacheHits = [];
+
+  Object.entries(CORPUS).forEach(([id, speeches]) => {
+    speeches.forEach(sp => {
+      const entry = {id, ...sp};
+
+      // 1. Already in data[] from preScored injection (corpus.json has scores)
+      const alreadyLoaded = (data[id] || []).find(
+        d => d.date === sp.date && d.title === sp.title
+      );
+      if (alreadyLoaded) { scored++; return; }
+
+      // 2. Check localStorage cache
+      const cached = getCachedScore(entry);
+      if (cached) {
+        data[id].push({
+          date: sp.date, title: sp.title, venue: sp.venue || '',
+          url: sp.url || '', ...cached
+        });
+        scored++;
+        cacheHits.push(entry);
+        return;
+      }
+
+      // 3. Needs API scoring
+      entries.push(entry);
+    });
+  });
+
+  const stats = getCacheStats();
+  if (cacheHits.length > 0 || scored > 0) {
+    document.getElementById('loadStatus').textContent =
+      `Cache: ${scored} loaded · ${entries.length} need scoring…`;
+  }
+
+  // Update progress bar for pre-loaded speeches
+  document.getElementById('progFill').style.width = (scored / total * 100) + '%';
+
+  if (entries.length === 0) {
+    // Everything already scored — skip API entirely
+    document.getElementById('loadStatus').textContent =
+      `All ${total} speeches loaded from cache ✓`;
+    document.getElementById('progFill').style.width = '100%';
+    return;
+  }
+
+  // Score only what's missing
+  document.getElementById('loadStatus').textContent =
+    `Scoring ${entries.length} new speeches via Claude…`;
+
   const BATCH = 5;
   for (let i = 0; i < entries.length; i += BATCH) {
-    await Promise.all(entries.slice(i, i+BATCH).map(scoreOne));
+    await Promise.all(entries.slice(i, i + BATCH).map(scoreOne));
   }
 }
 
@@ -1007,7 +1113,9 @@ ${entry.text}`;
       const d = await res.json();
       const raw = (d.content||[]).map(c=>c.text||'').join('');
       const r = JSON.parse(raw.replace(/```json|```/g,'').trim());
-      data[entry.id].push({date:entry.date,title:entry.title,venue:entry.venue,score:r.composite,stance:r.stance,balance:r.balance,direction:r.direction,reason:r.reason,keywords:r.keywords||[]});
+      const scoreData = {score:r.composite,stance:r.stance,balance:r.balance,direction:r.direction,reason:r.reason,keywords:r.keywords||[]};
+      data[entry.id].push({date:entry.date,title:entry.title,venue:entry.venue,url:entry.url||'',...scoreData});
+      setCachedScore(entry, scoreData);
       apiOk = true;
     } catch(e) {
       if (attempt === 2) {
@@ -1030,7 +1138,9 @@ ${entry.text}`;
     if (t.includes('hold')||t.includes('unchanged')||t.includes('patience')) dir=30;
     else if (t.includes('cut')||t.includes('ease')||t.includes('lower rates')) dir=-30;
     s=Math.max(-80,Math.min(80,s)); b=Math.max(-80,Math.min(80,b)); dir=Math.max(-80,Math.min(80,dir));
-    data[entry.id].push({date:entry.date,title:entry.title,venue:entry.venue,score:Math.round(.3*s+.35*b+.35*dir),stance:s,balance:b,direction:dir,reason:'Heuristic estimate (API unavailable).',keywords:[]});
+    const hScore = {score:Math.round(.3*s+.35*b+.35*dir),stance:s,balance:b,direction:dir,reason:'Heuristic estimate (API unavailable).',keywords:[]};
+    data[entry.id].push({date:entry.date,title:entry.title,venue:entry.venue,url:entry.url||'',...hScore});
+    setCachedScore(entry, hScore);
   }
   scored++;
   const pct = Math.round(scored/total*100);
@@ -1206,12 +1316,14 @@ function addRescoreButton() {
   const btn = document.createElement('button');
   btn.id = 'rescoreBtn';
   btn.textContent = '↺ Re-score';
-  btn.title = 'Re-run AI scoring for all speeches';
+  const stats = getCacheStats();
+  btn.title = `Re-run AI scoring · Cache: ${stats.count} speeches (${stats.sizeKB}KB) · Click to clear cache & rescore`;
   btn.style.cssText = 'position:fixed;bottom:18px;right:18px;padding:7px 16px;background:var(--card);border:1px solid var(--border);border-radius:5px;color:var(--dim);font-family:"IBM Plex Mono",monospace;font-size:.65rem;letter-spacing:.06em;cursor:pointer;z-index:100;text-transform:uppercase';
   btn.onmouseenter = () => btn.style.color = 'var(--fg)';
   btn.onmouseleave = () => btn.style.color = 'var(--dim)';
   btn.onclick = async () => {
     if (!window.ANTHROPIC_API_KEY) { alert('No API key set. Reload the page to enter one.'); return; }
+    clearScoreCache();
     // Reset scores
     Object.keys(data).forEach(k => data[k] = []);
     scored = 0;
