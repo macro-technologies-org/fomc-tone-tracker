@@ -6,7 +6,7 @@ appends to corpus.json which feeds the FOMC Tone Tracker.
 """
 
 import os, re, json, time, logging, hashlib, sys
-from datetime import datetime, date, timedelta
+from datetime import datetime, timezone, date, timedelta
 from typing import Optional
 import requests
 from bs4 import BeautifulSoup
@@ -465,7 +465,7 @@ def is_duplicate(corpus: dict, url: str) -> bool:
 def run():
     global LOOKBACK_DAYS  # must be at top of function
     log.info("=" * 60)
-    log.info(f"FOMC Tone Scraper — {datetime.utcnow().isoformat()}")
+    log.info(f"FOMC Tone Scraper — {datetime.now(timezone.utc).isoformat()}")
     log.info(f"Model: {SCORE_MODEL}")
     log.info("=" * 60)
 
@@ -474,7 +474,7 @@ def run():
     log.info(f"Existing corpus: {existing_count} speeches across {len(corpus)} members")
 
     # Merge manual supplement (speeches scraper can't auto-find)
-    supplement_path = CORPUS_PATH.parent / "corpus_supplement.json"
+    supplement_path = Path(CORPUS_FILE).parent / "corpus_supplement.json"
     if supplement_path.exists():
         try:
             supplement = json.loads(supplement_path.read_text())
@@ -565,7 +565,7 @@ def run():
             "reason":     score["reason"],
             "keywords":   score["keywords"],
             "model":      score["model"],
-            "scraped_at": datetime.utcnow().isoformat(),
+            "scraped_at": datetime.now(timezone.utc).isoformat(),
         })
         total_new += 1
         total_scored += 1
