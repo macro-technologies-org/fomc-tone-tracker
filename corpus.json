@@ -3074,40 +3074,6 @@
         "reason": "Heuristic pre-score",
         "keywords": []
       }
-    },
-    {
-      "date": "2026-02-24",
-      "title": "Welcoming Remarks at the \u201c2026 Technology-Enabled Disruption Conference: Shaping the Future of Finance and Payments\u201d",
-      "venue": "",
-      "url": "https://www.bostonfed.org/news-and-events/speeches/2026/remarks-at-2026-tech-enabled-disruption-conference.aspx",
-      "url_hash": "49b38ba121c3",
-      "source": "boston",
-      "text": "Welcoming Remarks at the \u201c2026 Technology-Enabled Disruption Conference: Shaping the Future of Finance and Payments\u201d View full size Peter Davis/Federal Reserve Bank of Boston By Susan M. Collins February 24, 2026 Boston, Massachusetts 2026 Technology-Enabled Disruption Conference: Shaping the Future of Finance and Payments Full-text Speech (pdf) share share share share Federal Reserve Bank of Boston President & CEO Susan M. Collins delivered welcoming remarks at the \u201c 2026 Technology-Enabled Disruption Conference: Shaping the Future of Finance and Payments .\u201d She discussed how rapid technological advancements are shaping economic activity in meaningful ways and influencing economic outcomes, citing broad advances in artificial intelligence, digital platforms, and payments technologies. Col",
-      "score": 0,
-      "stance": 0,
-      "balance": 0,
-      "direction": 0,
-      "reason": "Speech contains no monetary policy content, focusing entirely on welcoming remarks for a technology conference with no discussion of policy stance, neutral rate, restrictiveness, or rate path.",
-      "keywords": [
-        {
-          "word": "technological advancements",
-          "type": "neutral"
-        },
-        {
-          "word": "artificial intelligence",
-          "type": "neutral"
-        },
-        {
-          "word": "digital platforms",
-          "type": "neutral"
-        },
-        {
-          "word": "payments technologies",
-          "type": "neutral"
-        }
-      ],
-      "model": "claude-sonnet-4-5",
-      "scraped_at": "2026-02-27T08:22:40.515138"
     }
   ],
   "kugler": [
