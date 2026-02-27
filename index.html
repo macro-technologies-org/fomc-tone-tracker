@@ -1629,7 +1629,7 @@ function renderCompositePanel(){
         <div class="kpi"><div class="kpi-v" style="color:var(--dim)">${series.length}</div><div class="kpi-l">Data Points</div></div>
         <div class="kpi"><div class="kpi-v" style="color:var(--dim)">${new Date(latest.date).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})}</div><div class="kpi-l">Last Updated</div></div>
       </div>
-      <div style="position:relative;height:130px;margin-bottom:10px"><canvas id="compositeChart"></canvas></div>
+      <div style="position:relative;height:200px;margin-bottom:10px"><canvas id="compositeChart"></canvas></div>
       <div style="font-family:'IBM Plex Mono',monospace;font-size:.56rem;color:var(--dim);letter-spacing:.05em;margin-bottom:6px;text-transform:uppercase">Weight Hierarchy — contribution to composite</div>
       <div style="display:flex;flex-wrap:wrap;gap:5px">
         ${weightedGroups.map(g=>`<div style="display:flex;align-items:center;gap:4px;background:var(--bg);border:1px solid var(--border);padding:3px 7px;border-radius:4px">
@@ -1642,46 +1642,155 @@ function renderCompositePanel(){
 }
 
 let compositeChart=null;
+
+// Known FOMC meeting dates for annotation lines
+const FOMC_MEETINGS = [
+  '2024-01-31','2024-03-20','2024-05-01','2024-06-12','2024-07-31',
+  '2024-09-18','2024-11-07','2024-12-18',
+  '2025-01-29','2025-03-19','2025-05-07','2025-06-18','2025-07-30',
+  '2025-09-17','2025-10-29','2025-12-10',
+  '2026-01-29','2026-03-19','2026-05-07',
+];
+
 function initCompositeChart(series){
   const el=document.getElementById('compositeChart');
   if(!el) return;
   if(compositeChart){ compositeChart.destroy(); compositeChart=null; }
-  const scores=series.map(s=>s.score);
-  const ctx=el.getContext('2d');
-  const grad=ctx.createLinearGradient(0,0,0,130);
-  grad.addColorStop(0,'rgba(217,84,43,.18)');
-  grad.addColorStop(0.5,'rgba(107,122,148,.03)');
-  grad.addColorStop(1,'rgba(43,143,196,.18)');
-  const ptColors=scores.map(gc);
-  compositeChart=new Chart(el.getContext('2d'),{
-    type:'line',
-    data:{
-      labels:series.map(s=>new Date(s.date).toLocaleDateString('en-US',{month:'short',year:'2-digit'})),
+
+  const scores = series.map(s=>s.score);
+  const labels = series.map(s=>s.date);
+
+  // ── Auto-scale: pad 20% above/below actual data range ──
+  const minS = Math.min(...scores);
+  const maxS = Math.max(...scores);
+  const range = Math.max(maxS - minS, 8); // at least 8pt range
+  const pad   = Math.ceil(range * 0.30);
+  const yMin  = Math.floor(minS - pad);
+  const yMax  = Math.ceil(maxS + pad);
+
+  // ── Gradient: anchor to actual data range ──
+  const ctx = el.getContext('2d');
+  const h   = el.offsetHeight || 200;
+  const grad = ctx.createLinearGradient(0, 0, 0, h);
+  if(maxS > 0) grad.addColorStop(0, 'rgba(217,84,43,.22)');
+  grad.addColorStop(0.5, 'rgba(107,122,148,.04)');
+  if(minS < 0) grad.addColorStop(1, 'rgba(43,143,196,.22)');
+
+  const ptColors = scores.map(gc);
+
+  // ── FOMC meeting vertical annotations ──
+  const meetingPlugin = {
+    id:'fomcLines',
+    afterDraw(chart){
+      const {ctx, scales:{x, y}} = chart;
+      const neutralY = y.getPixelForValue(0);
+      // Neutral line (bold)
+      ctx.save();
+      ctx.strokeStyle = 'rgba(255,255,255,.08)';
+      ctx.lineWidth = 1;
+      ctx.setLineDash([3,4]);
+      ctx.beginPath();
+      ctx.moveTo(chart.chartArea.left, neutralY);
+      ctx.lineTo(chart.chartArea.right, neutralY);
+      ctx.stroke();
+      ctx.restore();
+
+      // FOMC meeting lines
+      FOMC_MEETINGS.forEach(meetDate => {
+        const idx = labels.findIndex(d => d >= meetDate);
+        if(idx < 0) return;
+        const xPx = x.getPixelForValue(idx);
+        if(xPx < chart.chartArea.left || xPx > chart.chartArea.right) return;
+        ctx.save();
+        ctx.strokeStyle = 'rgba(232,184,75,.20)';
+        ctx.lineWidth = 1;
+        ctx.setLineDash([2,3]);
+        ctx.beginPath();
+        ctx.moveTo(xPx, chart.chartArea.top);
+        ctx.lineTo(xPx, chart.chartArea.bottom);
+        ctx.stroke();
+        // Small label at bottom
+        ctx.fillStyle = 'rgba(232,184,75,.35)';
+        ctx.font = '8px IBM Plex Mono';
+        ctx.textAlign = 'center';
+        ctx.fillText('FOMC', xPx, chart.chartArea.bottom + 10);
+        ctx.restore();
+      });
+    }
+  };
+
+  compositeChart = new Chart(ctx, {
+    type: 'line',
+    plugins: [meetingPlugin],
+    data: {
+      labels,
       datasets:[{
-        data:scores,
-        borderColor:'#e8b84b',borderWidth:2.5,
-        backgroundColor:grad,fill:true,
-        pointBackgroundColor:ptColors,pointBorderColor:ptColors,
-        pointRadius:scores.map((_,i)=>i===scores.length-1?7:4),
-        pointHoverRadius:8,tension:0.4,
-      },{
-        data:scores.map(()=>0),
-        borderColor:'rgba(255,255,255,.07)',borderWidth:1,borderDash:[4,4],
-        pointRadius:0,fill:false
+        data: scores,
+        borderColor: '#e8b84b',
+        borderWidth: 2,
+        backgroundColor: grad,
+        fill: true,
+        pointBackgroundColor: ptColors,
+        pointBorderColor: ptColors,
+        pointRadius: scores.map((sc,i) => i===scores.length-1 ? 6 : (Math.abs(sc)>20?4:2.5)),
+        pointHoverRadius: 7,
+        tension: 0.35,
       }]
     },
-    options:{responsive:true,maintainAspectRatio:false,animation:{duration:600},
-      plugins:{legend:{display:false},tooltip:{
-        backgroundColor:'#161b24',borderColor:'#2a3448',borderWidth:1,
-        titleColor:'#cdd5e0',bodyColor:'#5a6880',
-        titleFont:{family:'IBM Plex Mono',size:9},
-        callbacks:{title:i=>i[0].label,label:i=>`FOMC Composite: ${i.raw>0?'+':''}${i.raw} (${gl(i.raw)})`}
-      }},
+    options:{
+      responsive: true,
+      maintainAspectRatio: false,
+      animation: {duration: 500},
+      plugins:{
+        legend: {display:false},
+        tooltip:{
+          backgroundColor:'#0f1319',
+          borderColor:'#2a3448',
+          borderWidth:1,
+          titleColor:'#e8b84b',
+          bodyColor:'#cdd5e0',
+          padding: 10,
+          titleFont:{family:'IBM Plex Mono',size:10},
+          bodyFont:{family:'IBM Plex Mono',size:10},
+          callbacks:{
+            title: items => {
+              const d = new Date(items[0].label+'T12:00:00');
+              return d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+            },
+            label: item => {
+              const sc = item.raw;
+              return ` ${sc>0?'+':''}${sc}  ${gl(sc)}`;
+            },
+            afterLabel: item => {
+              // Show if near a FOMC meeting
+              const d = item.label;
+              const near = FOMC_MEETINGS.find(m => Math.abs(new Date(m)-new Date(d)) < 14*86400000);
+              return near ? ` ↳ near FOMC ${new Date(near+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric'})}` : '';
+            }
+          }
+        }
+      },
       scales:{
-        x:{grid:{color:'rgba(255,255,255,.02)'},ticks:{color:'#3d4a5e',font:{family:'IBM Plex Mono',size:8}}},
-        y:{min:-60,max:60,grid:{color:'rgba(255,255,255,.02)'},
-          ticks:{color:'#3d4a5e',font:{family:'IBM Plex Mono',size:8},
-            callback:v=>v===0?'NEUTRAL':v>0?`+${v}▲`:`${v}▼`}}
+        x:{
+          grid:{color:'rgba(255,255,255,.02)'},
+          ticks:{
+            color:'#3d4a5e',
+            font:{family:'IBM Plex Mono',size:8},
+            maxTicksLimit: 14,
+            maxRotation: 0,
+          }
+        },
+        y:{
+          min: yMin,
+          max: yMax,
+          grid:{color:'rgba(255,255,255,.025)'},
+          ticks:{
+            color:'#5a6880',
+            font:{family:'IBM Plex Mono',size:9},
+            maxTicksLimit: 7,
+            callback: v => v===0 ? '— 0 NEUTRAL' : v>0 ? `+${v}` : `${v}`
+          }
+        }
       }
     }
   });
