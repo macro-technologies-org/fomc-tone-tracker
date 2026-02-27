@@ -449,10 +449,26 @@ header{padding:16px 28px;border-bottom:1px solid var(--border);display:flex;alig
 
 <!-- FRAMEWORK BAR -->
 <div class="framework-bar" style="grid-template-columns:repeat(7,1fr)">
-  <div class="fb-cell" id="fbCompositeCell" style="background:var(--s2);border-right:2px solid var(--accent)33">
-    <div class="fb-val" id="fbCompositeVal" style="font-size:1.6rem">—</div>
-    <div class="fb-label" style="color:var(--accent)">FOMC COMPOSITE</div>
-    <div class="fb-sub" id="fbCompositeSub" style="color:var(--dim)">weighted avg · all members</div>
+  <div class="fb-cell" id="fbCompositeCell" style="background:var(--s2);border-right:2px solid var(--accent)33;padding:10px 14px;min-width:180px">
+    <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:3px">
+      <div class="fb-val" id="fbCompositeVal" style="font-size:1.7rem;font-family:'DM Serif Display',serif">—</div>
+      <div id="fbCompositeDelta" style="font-family:'IBM Plex Mono',monospace;font-size:.65rem;color:var(--dim)"></div>
+    </div>
+    <div class="fb-label" style="color:var(--accent);margin-bottom:6px">FOMC COMPOSITE</div>
+    <!-- Dynamic gauge bar -->
+    <div id="fbGaugeWrap" style="position:relative;height:6px;background:var(--border);border-radius:3px;margin-bottom:5px;overflow:visible">
+      <!-- Colored fill from center -->
+      <div id="fbGaugeFill" style="position:absolute;top:0;height:6px;border-radius:3px;transition:all .6s ease"></div>
+      <!-- Needle -->
+      <div id="fbGaugeNeedle" style="position:absolute;top:-3px;width:2px;height:12px;border-radius:1px;background:#fff;transform:translateX(-50%);transition:left .6s ease;box-shadow:0 0 4px rgba(255,255,255,.4)"></div>
+      <!-- Center tick -->
+      <div style="position:absolute;left:50%;top:-2px;width:1px;height:10px;background:var(--dim2);transform:translateX(-50%)"></div>
+    </div>
+    <!-- Scale labels -->
+    <div style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:.48rem;color:var(--dim2);margin-bottom:4px">
+      <span>DOVE −50</span><span>NEUTRAL</span><span>HAWK +50</span>
+    </div>
+    <div class="fb-sub" id="fbCompositeSub" style="color:var(--dim);font-size:.58rem"></div>
   </div>
   <div class="fb-cell"><div class="fb-val" style="color:var(--accent)">3.625%</div><div class="fb-label">Current Rate</div><div class="fb-sub">3.50–3.75% target</div></div>
   <div class="fb-cell"><div class="fb-val" style="color:var(--neut)">3.0%</div><div class="fb-label">Neutral (LR)</div><div class="fb-sub">SEP median · range 2.6–3.9%</div></div>
@@ -1119,29 +1135,68 @@ async function startWithKey() {
 function updateCompositeBar() {
   const series = computeComposite();
   if (!series.length) return;
-  const latest = series[series.length - 1];
-  const score = latest.score;
-  const color = gc(score);
-  const label = gl(score);
 
+  const latest  = series[series.length - 1];
+  const prev    = series.length > 1 ? series[series.length - 2] : null;
+  const score   = latest.score;
+  const delta   = prev ? score - prev.score : 0;
+  const color   = gc(score);
+  const label   = gl(score);
+
+  // ── Score value ──
   const valEl = document.getElementById('fbCompositeVal');
-  const subEl = document.getElementById('fbCompositeSub');
-  const cellEl = document.getElementById('fbCompositeCell');
+  if (valEl) { valEl.textContent = (score > 0 ? '+' : '') + score; valEl.style.color = color; }
 
-  if (valEl) {
-    valEl.textContent = (score > 0 ? '+' : '') + score;
-    valEl.style.color = color;
+  // ── Delta badge ──
+  const deltaEl = document.getElementById('fbCompositeDelta');
+  if (deltaEl && delta !== 0) {
+    deltaEl.textContent = (delta > 0 ? '▲+' : '▼') + delta;
+    deltaEl.style.color = delta > 0 ? 'var(--hawk)' : 'var(--dove)';
   }
+
+  // ── Subtitle ──
+  const subEl = document.getElementById('fbCompositeSub');
   if (subEl) {
-    const d = new Date(latest.date);
+    const d = new Date(latest.date + 'T12:00:00');
     const dateStr = d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
-    subEl.textContent = `${label} · as of ${dateStr}`;
-    subEl.style.color = color + 'bb';
+    subEl.textContent = `${label} · ${dateStr}`;
+    subEl.style.color = color + 'cc';
   }
+
+  // ── Gauge ──
+  // Scale: map score to 0-100% position. Use ±50 as display range but clip at ±80.
+  // This makes marginal moves very visible around neutral.
+  const GAUGE_RANGE = 50; // ±50 fills the gauge
+  const clipped = Math.max(-GAUGE_RANGE, Math.min(GAUGE_RANGE, score));
+  const pct = (clipped + GAUGE_RANGE) / (GAUGE_RANGE * 2) * 100; // 0-100%
+
+  const fillEl   = document.getElementById('fbGaugeFill');
+  const needleEl = document.getElementById('fbGaugeNeedle');
+
+  if (fillEl) {
+    const center = 50;
+    if (score >= 0) {
+      fillEl.style.left   = center + '%';
+      fillEl.style.width  = (pct - center) + '%';
+    } else {
+      fillEl.style.left   = pct + '%';
+      fillEl.style.width  = (center - pct) + '%';
+    }
+    fillEl.style.background = color;
+    fillEl.style.opacity = '0.7';
+  }
+
+  if (needleEl) {
+    needleEl.style.left  = pct + '%';
+    needleEl.style.background = color;
+    needleEl.style.boxShadow = `0 0 6px ${color}`;
+  }
+
+  // ── Cell pulse ──
+  const cellEl = document.getElementById('fbCompositeCell');
   if (cellEl) {
-    // Pulse the cell briefly to draw attention
-    cellEl.style.transition = 'background 0.4s';
-    cellEl.style.background = color + '18';
+    cellEl.style.transition = 'background .4s';
+    cellEl.style.background = color + '14';
     setTimeout(() => { cellEl.style.background = 'var(--s2)'; }, 1200);
   }
 }
